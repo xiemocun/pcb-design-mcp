@@ -1,0 +1,70 @@
+{
+  "id": "external_5v_pulse_source_01",
+  "authorship": "Assistant-proposed benchmark within existing catalog/backend scope, after catalog inspection; not a blind user demand or a new topology",
+  "natural_language": "做一块外部5V供电的低频脉冲发生器，无MCU、固件或USB，持续输出40至60Hz、高电平占空比60%至75%的信号，供实验仪器读取。",
+  "supply": {
+    "nominal_v": 5,
+    "min_v": 4.75,
+    "max_v": 5.25,
+    "available_current_ma": 20,
+    "ambient_c": 25
+  },
+  "output": {
+    "frequency_min_hz": 40,
+    "frequency_max_hz": 60,
+    "duty_min": 0.6,
+    "duty_max": 0.75,
+    "high_min_v": 4,
+    "low_max_v": 0.5,
+    "external_resistance_min_ohm": 100000,
+    "external_capacitance_max_pf": 50
+  },
+  "operation": {
+    "steady_state_after_power_on_s": 1,
+    "continuous_observation_s": 60,
+    "output_externally_driven": false,
+    "common_ground": true,
+    "negative_supply_or_signal": false
+  },
+  "board": {
+    "width_mm": 60,
+    "height_mm": 40,
+    "layers": 2
+  },
+  "acceptance": {
+    "cad": "independent netlist/ERC/pad nets/layout/routing/DRC; zero unconnected",
+    "function": "frequency, duty and output levels must meet bounds throughout declared supply/load conditions; nominal RC formula alone is insufficient",
+    "physical": "not yet performed; no manufactured-function or production-ready claim"
+  },
+  "freeze_policy": "Do not change bounds or supply to make the run pass. Retain failed designs and manual intervention.",
+  "software_acceptance": [
+    {
+      "id": "spec",
+      "report": "spec_validate",
+      "pointer": "/verdict",
+      "operator": "equals",
+      "expected": "pass"
+    },
+    {
+      "id": "drc",
+      "report": "drc_run",
+      "pointer": "/verdict",
+      "operator": "equals",
+      "expected": "pass"
+    },
+    {
+      "id": "unconnected",
+      "report": "drc_run",
+      "pointer": "/details/unconnected_count",
+      "operator": "equals",
+      "expected": 0
+    },
+    {
+      "id": "copper-geometry",
+      "report": "pcb_copper_check",
+      "pointer": "/geometry_verdict",
+      "operator": "equals",
+      "expected": "pass"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "profile": "esp32_local_cap_slew_reference_v1",
+  "formula": "I_cap_A = C_nominal_tolerance_F * declared_max_dVdt_V_per_ms *1000",
+  "capacitance_scope": "nominal plus initial tolerance only; not effective biased/temperature/aging capacitance bound",
+  "current_baseline": "existing declared enabled-state DC budget; incremental downstream charge transferred once, no duplicate DC overhead",
+  "source_snapshots": [
+    {
+      "file": "ti-startup-extract.json",
+      "sha256": "10a78d19db9570c324f807289b8b91eabcef51fba19990ff6e95c13f24cae22d"
+    },
+    {
+      "file": "tps2553.pdf",
+      "sha256": "88e453700cea2b263cdb5b44fce1e883e0f6d3b975457f879ac1423eeea42071"
+    }
+  ],
+  "source_urls": [
+    "https://www.ti.com/lit/an/slva670a/slva670a.pdf",
+    "https://www.ti.com/lit/ds/symlink/tps2553.pdf"
+  ],
+  "actual_peak_current_upper_bound_a": null,
+  "actual_startup_time_upper_bound_ms": null,
+  "full_qualification": false,
+  "transfer_model": {
+    "buck": "delta_Iin = Vout_max * delta_Iout / (Vin_min * declared_eta)",
+    "ldo_or_load_switch": "delta_Iin = delta_Iout",
+    "scope": "quasi-static enabled voltage envelopes, simultaneous positive slews; not from-zero startup",
+    "assumptions": "same DC load/overhead/efficiency declarations apply during scenario; not established by a datasheet startup waveform"
+  }
+}

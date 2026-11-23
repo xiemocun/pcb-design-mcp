@@ -1,0 +1,48 @@
+{
+  "89b6dd0d81cf5cded62e68f5457e33d9f8a4bb79f4f8fed0d62977fb6fd5a72f": {
+    "manufacturer": "Wurth Elektronik",
+    "mpn": "61300211121",
+    "maximum_mm": 11.74,
+    "basis": "overall_part_envelope_upper_bound",
+    "url": "https://www.we-online.com/components/products/datasheet/61300211121.pdf",
+    "locator": "Rev 003.000, 2023-01-08, page 1, Dimensions, overall pin length 11.54 mm ±0.20 mm. Includes the solder tail as a conservative upper bound on the seated projection."
+  },
+  "e8da4b347501ec23fbaa32b78b596aa521d1a6293deb992451903ce729af46a9": {
+    "manufacturer": "Wurth Elektronik",
+    "mpn": "61300611121",
+    "maximum_mm": 11.74,
+    "basis": "overall_part_envelope_upper_bound",
+    "url": "https://www.we-online.com/components/products/datasheet/61300611121.pdf",
+    "locator": "Rev 004.000, 2025-11-08, page 1, Dimensions, overall pin length 11.54 mm ±0.20 mm. Includes the solder tail as a conservative upper bound on the seated projection."
+  },
+  "2d178b8b039c1fbe500afd813d9c8b8000c68aed53e1e25cccaa9472a30a3db2": {
+    "manufacturer": "Vishay",
+    "mpn": "CRCW060310K0FKEA",
+    "maximum_mm": 0.50,
+    "basis": "manufacturer_seated_part_envelope",
+    "url": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "locator": "Doc 20035, rev 14-Apr-2026, page 11, D11/CRCW0603 e3, H = 0.45 mm ±0.05 mm.",
+    "snapshot_file": "vishay-dcrcwe3-2026.pdf",
+    "snapshot_sha256": "4be046f9e6242f81255792de96cc7b2e11c9ad9cf86e411b0b9db401e7b5d54c"
+  },
+  "d53a35aadb410c6fa2130c300c1f7f9fbd453ed81f5a6655ad02b45d3b196fa8": {
+    "manufacturer": "Vishay",
+    "mpn": "CRCW0603100RFKEA",
+    "maximum_mm": 0.50,
+    "basis": "manufacturer_seated_part_envelope",
+    "url": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "locator": "Doc 20035, rev 14-Apr-2026, page 11, D11/CRCW0603 e3, H = 0.45 mm ±0.05 mm.",
+    "snapshot_file": "vishay-dcrcwe3-2026.pdf",
+    "snapshot_sha256": "4be046f9e6242f81255792de96cc7b2e11c9ad9cf86e411b0b9db401e7b5d54c"
+  },
+  "5374f247c8bee390de94ccb1d5cf2c3bac578462b2a09fefa90ddd67e99590fe": {
+    "manufacturer": "Vishay",
+    "mpn": "CRCW0603100KFKEA",
+    "maximum_mm": 0.50,
+    "basis": "manufacturer_seated_part_envelope",
+    "url": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+    "locator": "Doc 20035, rev 14-Apr-2026, page 11, D11/CRCW0603 e3, H = 0.45 mm ±0.05 mm.",
+    "snapshot_file": "vishay-dcrcwe3-2026.pdf",
+    "snapshot_sha256": "4be046f9e6242f81255792de96cc7b2e11c9ad9cf86e411b0b9db401e7b5d54c"
+  }
+}

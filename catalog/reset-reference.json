@@ -1,0 +1,21 @@
+{
+  "profile": "esp32_unloaded_en_rc_linear_ramp_v1",
+  "module_mpn": "ESP32-WROOM-32E-N4",
+  "module_symbol": "RF_Module:ESP32-WROOM-32E",
+  "en_pin_number": "3",
+  "guaranteed_low_max_reference_v": 0.6,
+  "high_level_fraction_reference": 0.75,
+  "minimum_stable_to_activation_reference_us": 50,
+  "minimum_reset_low_pulse_reference_us": 50,
+  "reference_ambient_c": 25,
+  "source_snapshot": {
+    "file": "espressif-reset-extract.json",
+    "sha256": "35b03321db67559319372b2083ea4a816521bbef43ac050ac08a7d0b5fdc032f"
+  },
+  "source_urls": [
+    "https://documentation.espressif.com/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.html",
+    "https://docs.espressif.com/projects/esp-hardware-design-guidelines/en/latest/esp32/schematic-checklist.html#chip-power-up-and-reset-timing"
+  ],
+  "model_scope": "Unloaded constant RC, nominal initial tolerances, ideal linear supply ramp then constant; no leakage,internal pull,external programmer,overshoot or brownout model",
+  "low_hold_criterion": "EN stays strictly below0.6V through declared supply stability+50us; 75percent crossing is not earliest actual reset release"
+}

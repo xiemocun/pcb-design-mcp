@@ -1,0 +1,13 @@
+{
+  "engine": "freerouting",
+  "version": "2.4.1",
+  "source_url": "https://github.com/freerouting/freerouting/releases/download/v2.4.1/freerouting-2.4.1.jar",
+  "sha256": "251101c3eeac22d7e7dfcf6796603279e5d1000283eb82d8f093780f7afc6aa9",
+  "java_version": "Temurin 25.0.5+8",
+  "java_source_url": "https://api.adoptium.net/v3/binary/latest/25/ga/mac/aarch64/jre/hotspot/normal/eclipse",
+  "java_archive_sha256": "72ebd76b502c849e88dea39afae51baf5f82f2b5b1b6389c28ea707b20451bce",
+  "fanout_enabled": false,
+  "optimizer_enabled": false,
+  "automatic_neckdown": true,
+  "qualification": "isolated KiCad DRC zero violations/unconnected, followed by actual MCP end-to-end acceptance; physical board not tested"
+}

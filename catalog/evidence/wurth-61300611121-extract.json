@@ -1,0 +1,25 @@
+{
+  "body_length_mm": 15.24,
+  "hole_tolerance_mm": 0.15,
+  "manufacturer": "Wurth Elektronik",
+  "mpn": "61300611121",
+  "pin_count": 6,
+  "pin_square_width_mm": 0.64,
+  "pin_square_width_tolerance_mm": 0.15,
+  "pitch_mm": 2.54,
+  "pitch_tolerance_mm": 0.05,
+  "rated_current_a": 3.0,
+  "recommended_hole_diameter_mm": 1.1,
+  "revision": "004.000 2025-11-08",
+  "scope": "Selected primary PDF facts verified through web text; direct file download returned HTTP 403. This is not the full PDF or a physical fit qualification.",
+  "source_pages": [
+    1,
+    2
+  ],
+  "span_mm": 12.7,
+  "temperature_range_c": [
+    -40.0,
+    105.0
+  ],
+  "working_voltage_ac_v": 250.0
+}

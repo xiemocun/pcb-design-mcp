@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pcb-design-mcp"
+dynamic = ["version"]
+description = "Typed KiCad design MCP with verified geometry and signed prototype file exports"
+requires-python = ">=3.12"
+dependencies = ["mcp>=1,<2", "skidl>=3,<4", "schematizer>=0.2,<0.3", "cryptography>=44", "jsonschema>=4,<5", "numpy>=1.26,<3", "pydantic>=2,<3"]
+
+[project.scripts]
+pcb-mcp = "pcb_mcp_client.cli:main"
+pcb-design-mcp = "pcb_mcp.server:main"
+pcb-plan = "pcb_mcp_client.run_plan:cli"
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.dynamic]
+version = {attr = "pcb_mcp.__version__"}
+[tool.setuptools.packages.find]
+where = ["src"]

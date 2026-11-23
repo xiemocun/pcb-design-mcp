@@ -1,0 +1,420 @@
+{
+  "version": 1,
+  "name": "从空项目：两路5V到3.3V施密特逻辑输入",
+  "requirement_sha256": "e7bab942a0fa90585bb28a3e23cc6168b5c2d79e90960d5501a2ed4a3048fd2c",
+  "components": [
+    {
+      "ref": "J1",
+      "mpn": "61300211121",
+      "part_definition_hash": "89b6dd0d81cf5cded62e68f5457e33d9f8a4bb79f4f8fed0d62977fb6fd5a72f",
+      "value": null
+    },
+    {
+      "ref": "J2",
+      "mpn": "61300211121",
+      "part_definition_hash": "89b6dd0d81cf5cded62e68f5457e33d9f8a4bb79f4f8fed0d62977fb6fd5a72f",
+      "value": null
+    },
+    {
+      "ref": "J3",
+      "mpn": "61300211121",
+      "part_definition_hash": "89b6dd0d81cf5cded62e68f5457e33d9f8a4bb79f4f8fed0d62977fb6fd5a72f",
+      "value": null
+    },
+    {
+      "ref": "J4",
+      "mpn": "61300211121",
+      "part_definition_hash": "89b6dd0d81cf5cded62e68f5457e33d9f8a4bb79f4f8fed0d62977fb6fd5a72f",
+      "value": null
+    },
+    {
+      "ref": "J5",
+      "mpn": "61300211121",
+      "part_definition_hash": "89b6dd0d81cf5cded62e68f5457e33d9f8a4bb79f4f8fed0d62977fb6fd5a72f",
+      "value": null
+    },
+    {
+      "ref": "U1",
+      "mpn": "SN74LVC1G17DBVR",
+      "part_definition_hash": "ed0e29523872143d0f883131527017abef6eeed5c41dbc2f5afe75223c2fed19",
+      "value": null
+    },
+    {
+      "ref": "U2",
+      "mpn": "SN74LVC1G17DBVR",
+      "part_definition_hash": "ed0e29523872143d0f883131527017abef6eeed5c41dbc2f5afe75223c2fed19",
+      "value": null
+    },
+    {
+      "ref": "C1",
+      "mpn": "C1608X7R1H104K080AA",
+      "part_definition_hash": "ad32e949fe8e270e33d2f5d5bbaaff8b438ca0e7f77414bd9bee83cb80c980e2",
+      "value": "100nF"
+    },
+    {
+      "ref": "C2",
+      "mpn": "C1608X7R1H104K080AA",
+      "part_definition_hash": "ad32e949fe8e270e33d2f5d5bbaaff8b438ca0e7f77414bd9bee83cb80c980e2",
+      "value": "100nF"
+    },
+    {
+      "ref": "R1",
+      "mpn": "CRCW0603100KFKEA",
+      "part_definition_hash": "5374f247c8bee390de94ccb1d5cf2c3bac578462b2a09fefa90ddd67e99590fe",
+      "value": "100k"
+    },
+    {
+      "ref": "R2",
+      "mpn": "CRCW0603100KFKEA",
+      "part_definition_hash": "5374f247c8bee390de94ccb1d5cf2c3bac578462b2a09fefa90ddd67e99590fe",
+      "value": "100k"
+    }
+  ],
+  "nets": [
+    {
+      "name": "V3V3",
+      "kind": "power",
+      "pins": [
+        {
+          "ref": "J1",
+          "number": "1"
+        },
+        {
+          "ref": "U1",
+          "number": "5"
+        },
+        {
+          "ref": "U2",
+          "number": "5"
+        },
+        {
+          "ref": "C1",
+          "number": "1"
+        },
+        {
+          "ref": "C2",
+          "number": "1"
+        }
+      ]
+    },
+    {
+      "name": "GND",
+      "kind": "ground",
+      "pins": [
+        {
+          "ref": "J1",
+          "number": "2"
+        },
+        {
+          "ref": "J2",
+          "number": "2"
+        },
+        {
+          "ref": "J3",
+          "number": "2"
+        },
+        {
+          "ref": "J4",
+          "number": "2"
+        },
+        {
+          "ref": "J5",
+          "number": "2"
+        },
+        {
+          "ref": "U1",
+          "number": "3"
+        },
+        {
+          "ref": "U2",
+          "number": "3"
+        },
+        {
+          "ref": "C1",
+          "number": "2"
+        },
+        {
+          "ref": "C2",
+          "number": "2"
+        },
+        {
+          "ref": "R1",
+          "number": "2"
+        },
+        {
+          "ref": "R2",
+          "number": "2"
+        }
+      ]
+    },
+    {
+      "name": "IN_A",
+      "kind": "signal",
+      "pins": [
+        {
+          "ref": "J2",
+          "number": "1"
+        },
+        {
+          "ref": "U1",
+          "number": "2"
+        },
+        {
+          "ref": "R1",
+          "number": "1"
+        }
+      ]
+    },
+    {
+      "name": "OUT_A",
+      "kind": "signal",
+      "pins": [
+        {
+          "ref": "U1",
+          "number": "4"
+        },
+        {
+          "ref": "J3",
+          "number": "1"
+        }
+      ]
+    },
+    {
+      "name": "IN_B",
+      "kind": "signal",
+      "pins": [
+        {
+          "ref": "J4",
+          "number": "1"
+        },
+        {
+          "ref": "U2",
+          "number": "2"
+        },
+        {
+          "ref": "R2",
+          "number": "1"
+        }
+      ]
+    },
+    {
+      "name": "OUT_B",
+      "kind": "signal",
+      "pins": [
+        {
+          "ref": "U2",
+          "number": "4"
+        },
+        {
+          "ref": "J5",
+          "number": "1"
+        }
+      ]
+    }
+  ],
+  "no_connects": [
+    {
+      "pin": {
+        "ref": "U1",
+        "number": "1"
+      },
+      "reason": "Manufacturer DBV physical pin 1 is internally not connected"
+    },
+    {
+      "pin": {
+        "ref": "U2",
+        "number": "1"
+      },
+      "reason": "Manufacturer DBV physical pin 1 is internally not connected"
+    }
+  ],
+  "settings": [
+    {
+      "tool": "requirements_set",
+      "args": {
+        "items": [
+          {
+            "key": "function",
+            "value": "做一块两路5V开关信号到3.3V逻辑的转换板；高低电平不反相，缓慢变化的输入需要施密特整形。外部3.3V供电，无MCU、固件或USB。",
+            "origin": "proposed_assumption"
+          },
+          {
+            "key": "frozen_requirement_sha256",
+            "value": "e7bab942a0fa90585bb28a3e23cc6168b5c2d79e90960d5501a2ed4a3048fd2c",
+            "origin": "proposed_assumption"
+          },
+          {
+            "key": "benchmark_id",
+            "value": "dual_5v_to_3v3_logic_01",
+            "origin": "proposed_assumption"
+          }
+        ]
+      }
+    },
+    {
+      "tool": "power_source_set",
+      "args": {
+        "net_id": {
+          "$net": "V3V3"
+        },
+        "ground_net_id": {
+          "$net": "GND"
+        },
+        "boundary_pin": {
+          "$pin": [
+            "J1",
+            "1"
+          ]
+        },
+        "nominal_v": 3.3,
+        "reason": "Frozen external 3.3V benchmark supply, not measured"
+      }
+    },
+    {
+      "tool": "power_envelope_set",
+      "args": {
+        "positive_pin": {
+          "$pin": [
+            "J1",
+            "1"
+          ]
+        },
+        "ground_net_id": {
+          "$net": "GND"
+        },
+        "nominal_v": 3.3,
+        "min_v": 3.135,
+        "max_v": 3.465,
+        "available_current_ma": 20,
+        "ambient_c": 25,
+        "origin": "proposed_assumption",
+        "reason": "Frozen supply envelope for this static two-channel benchmark"
+      }
+    },
+    {
+      "tool": "passive_ratings_set",
+      "args": {
+        "requirements": [
+          {
+            "component_id": {
+              "$component": "C1"
+            },
+            "max_applied_voltage_v": 3.465,
+            "max_tolerance_fraction": 0.1,
+            "allowed_dielectrics": [
+              "X7R"
+            ]
+          },
+          {
+            "component_id": {
+              "$component": "C2"
+            },
+            "max_applied_voltage_v": 3.465,
+            "max_tolerance_fraction": 0.1,
+            "allowed_dielectrics": [
+              "X7R"
+            ]
+          },
+          {
+            "component_id": {
+              "$component": "R1"
+            },
+            "max_applied_voltage_v": 5.25,
+            "max_tolerance_fraction": 0.01,
+            "min_resistor_rated_power_w": 0.1
+          },
+          {
+            "component_id": {
+              "$component": "R2"
+            },
+            "max_applied_voltage_v": 5.25,
+            "max_tolerance_fraction": 0.01,
+            "min_resistor_rated_power_w": 0.1
+          }
+        ],
+        "origin": "proposed_assumption",
+        "reason": "Source selected capacitor and input pulldown required ratings"
+      }
+    },
+    {
+      "tool": "power_budget_set",
+      "args": {
+        "profile": "direct_source_dc_v1",
+        "loads": [
+          {
+            "pin": {
+              "$pin": [
+                "U1",
+                "5"
+              ]
+            },
+            "max_current_ma": 1,
+            "scope": "supply_terminal_dc_including_io_drive"
+          },
+          {
+            "pin": {
+              "$pin": [
+                "U2",
+                "5"
+              ]
+            },
+            "max_current_ma": 1,
+            "scope": "supply_terminal_dc_including_io_drive"
+          }
+        ],
+        "stages": [],
+        "reserves": [
+          {
+            "net_id": {
+              "$net": "V3V3"
+            },
+            "unmodeled_dc_reserve_ma": 2
+          }
+        ],
+        "origin": "proposed_assumption",
+        "reason": "1mA declared budget per buffer including 100uA output load plus 2mA reserve; not measured worst case"
+      }
+    },
+    {
+      "tool": "board_constraints_set",
+      "args": {
+        "width_mm": 60,
+        "height_mm": 40,
+        "clearance_mm": 0.15,
+        "track_width_mm": 0.2,
+        "edge_clearance_mm": 0.5,
+        "min_drill_mm": 0.3,
+        "hole_clearance_mm": 0.15,
+        "hole_to_hole_mm": 0.25,
+        "placement_profile": "bounded_grid"
+      }
+    },
+    {
+      "tool": "pcb_net_rules_set",
+      "args": {
+        "rules": [
+          {
+            "net_id": {
+              "$net": "V3V3"
+            },
+            "min_width_mm": 0.3,
+            "design_current_a": 0.02,
+            "reference_drop_budget_v": 0.05
+          },
+          {
+            "net_id": {
+              "$net": "GND"
+            },
+            "min_width_mm": 0.3,
+            "design_current_a": 0.02,
+            "reference_drop_budget_v": 0.05
+          }
+        ],
+        "copper_thickness_um": 35,
+        "temperature_rise_c": 20,
+        "origin": "proposed_assumption",
+        "reason": "Frozen direct power source; 20mA reference screen, not measured copper/current"
+      }
+    }
+  ]
+}

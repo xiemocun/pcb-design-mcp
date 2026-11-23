@@ -1,0 +1,42 @@
+{
+  "project_id": "541005c8bf52487b8b7453953fbd40bd",
+  "revision": 0,
+  "schematic_build_id": "5d62ff3850b5497298af7d5222dcbcf5",
+  "pcb_build_id": "cffb0e18da80424aacd186827f1842f8",
+  "read_gpio": 27,
+  "drive_gpio": 26,
+  "drive_release_level": 1,
+  "interface": {
+    "kind": "split_open_drain",
+    "sensor": "U2",
+    "receiver": "U4",
+    "driver": "U9",
+    "read_gpio": "IO27",
+    "drive_gpio": "IO26",
+    "drive_release_level": 1,
+    "voltage_reference": {
+      "margins_v": {
+        "sensor_low_to_receiver_v": 0.04999999999999999,
+        "sensor_high_to_receiver_v": 0.8077217187483727,
+        "driver_low_to_sensor_v": 0.8292405729161241,
+        "mcu_low_to_driver_v": 0.45887054137163336,
+        "mcu_high_to_driver_v": 0.580747740246168,
+        "receiver_low_to_mcu_v": 0.7064836688269275,
+        "receiver_high_to_mcu_v": 0.7064836688269275
+      },
+      "basis": "manufacturer static table envelopes; ground offsets, actual edge/noise and physical waveforms excluded",
+      "output_load_limit_a": 0.0001,
+      "sink_current_reference_a": 0.006453181818181818
+    },
+    "physical_qualified": false
+  },
+  "source_evidence_hash": "c9f2e97ca361da0b8923a9cd2f38bbb875b24ef1b31e3e1e76f9d0fb1eb1654c",
+  "connected_physical_pins": 119,
+  "artifact_hashes": {
+    "541005c8bf52487b8b7453953fbd40bd/builds/5d62ff3850b5497298af7d5222dcbcf5/led.kicad_sch": "b2d5fd87b27b83311c48f58a6f6fb88e60753d00d6a2fd618c8da68397f6d556",
+    "541005c8bf52487b8b7453953fbd40bd/builds/5d62ff3850b5497298af7d5222dcbcf5/actual.xml": "ac2aecab61fcf3282abca8471fa5179ad0e45079298a365c04cd58fe30b19e8f",
+    "541005c8bf52487b8b7453953fbd40bd/pcb_builds/cffb0e18da80424aacd186827f1842f8/routed.kicad_pcb": "cb8e23455c6d9c5ff431eb96e8fa04972f30b49f5347f206bf28b42349e73a47"
+  },
+  "copper_verdict": "incomplete",
+  "physical_verified": false
+}

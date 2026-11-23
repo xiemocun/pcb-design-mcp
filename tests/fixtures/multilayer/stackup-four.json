@@ -1,0 +1,18 @@
+{
+  "layers": 4,
+  "thickness_mm": 1.6,
+  "stackup": {
+    "basis": "Synthetic geometry development fixture; material parameters and construction are proposed test inputs, not a board-house specification or impedance qualification.",
+    "copper": [
+      {"name": "F.Cu", "thickness_um": 35.0},
+      {"name": "In1.Cu", "thickness_um": 18.0},
+      {"name": "In2.Cu", "thickness_um": 18.0},
+      {"name": "B.Cu", "thickness_um": 35.0}
+    ],
+    "dielectrics": [
+      {"kind": "prepreg", "thickness_mm": 0.2, "material": "Synthetic FR4", "epsilon_r": 4.2, "loss_tangent": 0.02},
+      {"kind": "core", "thickness_mm": 1.094, "material": "Synthetic FR4", "epsilon_r": 4.2, "loss_tangent": 0.02},
+      {"kind": "prepreg", "thickness_mm": 0.2, "material": "Synthetic FR4", "epsilon_r": 4.2, "loss_tangent": 0.02}
+    ]
+  }
+}

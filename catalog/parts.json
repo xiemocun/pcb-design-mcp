@@ -1,0 +1,1920 @@
+{
+  "catalog_version": "source-linked-bom-0.12",
+  "scope": "32 source-linked nominal identities; no physical or production qualification",
+  "parts": [
+    {
+      "manufacturer": "Vishay BCcomponents",
+      "mpn": "MRS25000C4700FCT00",
+      "kind": "resistor",
+      "symbol_id": "Device:R",
+      "value_ohm": 470.0,
+      "tolerance_fraction": 0.01,
+      "rated_power_w": 0.6,
+      "temperature_coefficient_ppm_per_k": 50.0,
+      "voltage_rating_v": 350.0,
+      "dimensions": {
+        "body_length_max_mm": 6.5,
+        "body_diameter_max_mm": 2.5,
+        "lead_diameter_nominal_mm": 0.6,
+        "mounting_pitch_min_mm": 10.0
+      },
+      "footprint_id": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+      "pin_mapping": {
+        "1": "passive",
+        "2": "passive"
+      },
+      "sources": [
+        {
+          "url": "https://www.vishay.com/docs/28724/mrs16m25.pdf",
+          "revision": "28724, 07-Mar-2016; disclaimer 01-Jan-2026",
+          "pages": [
+            1,
+            2,
+            3
+          ],
+          "observed_on": "2026-10-22",
+          "evidence_kind": "primary_pdf_local_snapshot",
+          "verification": "source_linked_not_human_qualified",
+          "local_snapshot_file": "mrs.pdf",
+          "pdf_sha256": "645bb41aaa34f2a72fc19fc71d02ddb14ed400ae97634684ad1745189505f47e"
+        }
+      ],
+      "skus": [
+        {
+          "supplier": "DigiKey",
+          "sku": "BC4173CT-ND",
+          "url": "https://www.digikey.com/en/products/detail/vishay-beyschlag-draloric-bc-components/MRS25000C4700FCT00/5064471",
+          "observed_on": "2026-10-22",
+          "live_stock_and_price": "not_checked"
+        }
+      ],
+      "selection_basis": "DIN0207; 10.16mm >= documented Mmin 10.0mm. Footprint body drawing nominal 6.3mm versus part Lmax 6.5mm; final assembly/courtyard must be reviewed.",
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "package_validation": "nominal_land_pattern_only",
+      "physical_sample_tested": false,
+      "temperature_range_c": [
+        -55.0,
+        155.0
+      ]
+    },
+    {
+      "manufacturer": "Kingbright",
+      "mpn": "WP7113ID",
+      "kind": "led",
+      "symbol_id": "Device:LED",
+      "color": "red",
+      "dc_current_abs_max_a": 0.03,
+      "power_abs_max_w": 0.075,
+      "vf_typ_v": 1.9,
+      "vf_max_at_10ma_v": 2.3,
+      "vf_test_current_a": 0.01,
+      "ratings_ambient_c": 25.0,
+      "dimensions": {
+        "lead_pitch_mm": 2.54,
+        "recommended_drill_mm": 0.9,
+        "lens_diameter_mm": 5.0,
+        "flange_diameter_mm": 5.9
+      },
+      "footprint_id": "LED_THT:LED_D5.0mm",
+      "pin_mapping": {
+        "1": "cathode",
+        "2": "anode"
+      },
+      "sources": [
+        {
+          "url": "https://www.kingbrightusa.com/images/catalog/spec/wp7113id.pdf",
+          "revision": "DSAF0012 V.14A, 01/08/2026",
+          "pages": [
+            1,
+            2,
+            4,
+            5
+          ],
+          "observed_on": "2026-10-22",
+          "evidence_kind": "primary_pdf_local_snapshot",
+          "verification": "source_linked_not_human_qualified",
+          "local_snapshot_file": "wp7113id.pdf",
+          "pdf_sha256": "b5bb33f69c13fd92ab6d47a8fd71168b6e7ee685139c8f381957aeea9286c9da"
+        }
+      ],
+      "skus": [
+        {
+          "supplier": "DigiKey",
+          "sku": "754-1264-ND",
+          "url": "https://www.digikey.com/en/products/detail/kingbright/WP7113ID/1747663",
+          "observed_on": "2026-10-22",
+          "live_stock_and_price": "not_checked"
+        }
+      ],
+      "selection_basis": "Datasheet cathode lead mapped to KiCad LED K/pad1; 2.54mm pitch and 0.9mm recommended holes. Lead-forming and tolerance acceptance require human assembly review.",
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "package_validation": "nominal_land_pattern_only",
+      "physical_sample_tested": false
+    },
+    {
+      "manufacturer": "Wurth Elektronik",
+      "mpn": "61300211121",
+      "kind": "connector",
+      "symbol_id": "Connector_Generic:Conn_01x02",
+      "rated_current_a": 3.0,
+      "dimensions": {
+        "pins": 2,
+        "lead_pitch_mm": 2.54,
+        "recommended_drill_mm": 1.1,
+        "hole_tolerance_mm": 0.15,
+        "body_length_mm": 5.08
+      },
+      "footprint_id": "Connector_PCB_MCP:WR_PHD_1x02_P2.54mm_Drill1.10mm",
+      "pin_mapping": {
+        "1": "pin_1_end",
+        "2": "pin_2"
+      },
+      "sources": [
+        {
+          "url": "https://www.we-online.com/components/products/datasheet/61300211121.pdf",
+          "revision": "003.000, 2023-01-08",
+          "pages": [
+            1,
+            2
+          ],
+          "observed_on": "2026-10-22",
+          "evidence_kind": "primary_pdf_web_extract",
+          "verification": "source_linked_not_human_qualified"
+        }
+      ],
+      "skus": [
+        {
+          "supplier": "DigiKey",
+          "sku": "732-5315-ND",
+          "url": "https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/61300211121/4846823",
+          "observed_on": "2026-10-22",
+          "live_stock_and_price": "not_checked"
+        }
+      ],
+      "selection_basis": "Owned source-linked nominal footprint uses manufacturer 2.54mm pitch and 1.10mm recommended hole. Unkeyed connector polarity and hole tolerances require assembly review.",
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "package_validation": "nominal_land_pattern_only",
+      "physical_sample_tested": false
+    },
+    {
+      "manufacturer": "Espressif Systems",
+      "mpn": "ESP32-WROOM-32E-N4",
+      "kind": "mcu_module",
+      "symbol_id": "RF_Module:ESP32-WROOM-32E",
+      "footprint_id": "RF_Module:ESP32-WROOM-32E",
+      "supply_min_v": 3.0,
+      "supply_max_v": 3.6,
+      "supply_design_capacity_min_a": 0.5,
+      "flash_mb": 4,
+      "sources": [
+        {
+          "url": "https://documentation.espressif.com/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.html",
+          "revision": "2.1",
+          "sections": [
+            "1.2",
+            "6.2",
+            "9",
+            "11"
+          ],
+          "evidence_kind": "primary_html_web_extract",
+          "observed_on": "2026-10-22",
+          "verification": "source_linked_not_human_qualified"
+        }
+      ],
+      "skus": [
+        {
+          "supplier": "DigiKey",
+          "sku": "1965-ESP32-WROOM-32E-N4CT-ND",
+          "url": "https://www.digikey.com/en/products/detail/espressif-systems/ESP32-WROOM-32E-N4/11613125",
+          "observed_on": "2026-10-22",
+          "live_stock_and_price": "not_checked"
+        }
+      ],
+      "selection_basis": "Exact local symbol/land pattern plus source parameters; prototype only, physical sample not qualified.",
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "package_validation": "nominal_land_pattern_only",
+      "physical_sample_tested": false
+    },
+    {
+      "manufacturer": "Aosong Electronics",
+      "mpn": "AM2302",
+      "kind": "sensor",
+      "symbol_id": "PCB_MCP:AM2302_SIP4",
+      "footprint_id": "Sensor:ASAIR_AM2302_P2.54mm_Vertical",
+      "supply_min_v": 3.3,
+      "supply_max_v": 5.5,
+      "pin_mapping": {
+        "1": "VDD",
+        "2": "SDA",
+        "3": "NC",
+        "4": "GND"
+      },
+      "package": "SIP-4; not a 3-pin breakout",
+      "sources": [
+        {
+          "url": "https://www.aosong.com/uploadfiles/2025/04/20250417105409216.pdf",
+          "revision": "V1.0",
+          "pages": [
+            2,
+            4,
+            8
+          ],
+          "evidence_kind": "primary_pdf_local_snapshot",
+          "local_snapshot_file": "am2302.pdf",
+          "pdf_sha256": "a8f321e5f91420d78c6282e17c8913a85c89f265991a20c5d8e6111b10f600fd",
+          "observed_on": "2026-10-22",
+          "verification": "source_linked_not_human_qualified"
+        }
+      ],
+      "skus": [
+        {
+          "supplier": "LCSC",
+          "sku": "C83988",
+          "url": "https://www.lcsc.com/product-detail/Temperature-and-Humidity-Sensor_Aosong-Guangzhou-Elec-AM2302_C83988.html",
+          "observed_on": "2026-10-22",
+          "live_stock_and_price": "not_checked"
+        }
+      ],
+      "selection_basis": "Exact local symbol/land pattern plus source parameters; prototype only, physical sample not qualified.",
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "package_validation": "nominal_land_pattern_only",
+      "physical_sample_tested": false
+    },
+    {
+      "manufacturer": "Texas Instruments",
+      "mpn": "TLV75533PDBVR",
+      "kind": "regulator",
+      "symbol_id": "Regulator_Linear:TLV75533PDBV",
+      "footprint_id": "Package_TO_SOT_SMD:SOT-23-5",
+      "supply_min_v": 1.45,
+      "supply_max_v": 5.5,
+      "output_nominal_v": 3.3,
+      "output_accuracy_fraction_to_85c": 0.01,
+      "rated_output_current_a": 0.5,
+      "dropout_max_v_at_rated_current": 0.238,
+      "theta_ja_jedec_c_per_w": 231.1,
+      "max_operating_junction_c": 125.0,
+      "pin_mapping": {
+        "1": "IN",
+        "2": "GND",
+        "3": "EN",
+        "4": "NC",
+        "5": "OUT"
+      },
+      "sources": [
+        {
+          "url": "https://www.ti.com/lit/ds/symlink/tlv755p.pdf",
+          "revision": "SBVS320D September 2024",
+          "pages": [
+            3,
+            4,
+            5
+          ],
+          "evidence_kind": "primary_pdf_local_snapshot",
+          "local_snapshot_file": "tlv755p.pdf",
+          "pdf_sha256": "945e5ba0323addcda19fccc311b6791edc843725b25a62ca128e5ccdf0988ef1",
+          "observed_on": "2026-10-22",
+          "verification": "source_linked_not_human_qualified"
+        }
+      ],
+      "skus": [
+        {
+          "supplier": "Texas Instruments",
+          "sku": "TLV75533PDBVR",
+          "url": "https://www.ti.com/product/TLV755P/part-details/TLV75533PDBVR",
+          "observed_on": "2026-10-22",
+          "live_stock_and_price": "not_checked"
+        }
+      ],
+      "selection_basis": "Exact local symbol/land pattern plus source parameters; prototype only, physical sample not qualified.",
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "package_validation": "nominal_land_pattern_only",
+      "physical_sample_tested": false,
+      "output_accuracy_fraction_full_junction": 0.015
+    },
+    {
+      "manufacturer": "Vishay BCcomponents",
+      "mpn": "MRS25000C3300FCT00",
+      "kind": "resistor",
+      "symbol_id": "Device:R",
+      "value_ohm": 330.0,
+      "tolerance_fraction": 0.01,
+      "rated_power_w": 0.6,
+      "temperature_coefficient_ppm_per_k": 50.0,
+      "voltage_rating_v": 350.0,
+      "dimensions": {
+        "body_length_max_mm": 6.5,
+        "body_diameter_max_mm": 2.5,
+        "lead_diameter_nominal_mm": 0.6,
+        "mounting_pitch_min_mm": 10.0
+      },
+      "footprint_id": "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal",
+      "pin_mapping": {
+        "1": "passive",
+        "2": "passive"
+      },
+      "sources": [
+        {
+          "url": "https://www.vishay.com/docs/28724/mrs16m25.pdf",
+          "revision": "28724, 07-Mar-2016; disclaimer 01-Jan-2026",
+          "pages": [
+            1,
+            2,
+            3
+          ],
+          "observed_on": "2026-10-22",
+          "evidence_kind": "primary_pdf_local_snapshot",
+          "verification": "source_linked_not_human_qualified",
+          "local_snapshot_file": "mrs.pdf",
+          "pdf_sha256": "645bb41aaa34f2a72fc19fc71d02ddb14ed400ae97634684ad1745189505f47e"
+        }
+      ],
+      "skus": [
+        {
+          "supplier": "DigiKey",
+          "sku": "BC4123CT-ND",
+          "url": "https://www.digikey.com/en/products/detail/vishay-beyschlag-draloric-bc-components/MRS25000C3300FCT00/5064347",
+          "observed_on": "2026-10-22",
+          "live_stock_and_price": "not_checked"
+        }
+      ],
+      "selection_basis": "DIN0207; 10.16mm >= documented Mmin 10.0mm. Footprint body drawing nominal 6.3mm versus part Lmax 6.5mm; final assembly/courtyard must be reviewed. 330 ohm order code and supplier identity independently checked; electrical/mechanical limits use the same manufacturer MRS25 family datasheet snapshot.",
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "package_validation": "nominal_land_pattern_only",
+      "physical_sample_tested": false,
+      "temperature_range_c": [
+        -55.0,
+        155.0
+      ]
+    },
+    {
+      "manufacturer": "Texas Instruments",
+      "mpn": "TXS0102DCTR",
+      "kind": "level_translator",
+      "symbol_id": "Logic_LevelTranslator:TXS0102DCT",
+      "footprint_id": "Package_SO:SSOP-8_2.95x2.8mm_P0.65mm",
+      "vcca_min_v": 1.65,
+      "vcca_max_v": 3.6,
+      "vccb_min_v": 2.3,
+      "vccb_max_v": 5.5,
+      "vcca_must_not_exceed_vccb": true,
+      "oe_reference": "VCCA",
+      "internal_pullup_nominal_ohm": 10000.0,
+      "internal_pullup_tolerance": "not_established",
+      "powerup_policy": "OE low via external pulldown until both supplies stable; firmware behavior unverified",
+      "pin_mapping": {
+        "1": "B2",
+        "2": "GND",
+        "3": "VCCA",
+        "4": "A2",
+        "5": "A1",
+        "6": "OE",
+        "7": "VCCB",
+        "8": "B1"
+      },
+      "sources": [
+        {
+          "url": "https://www.ti.com/lit/ds/symlink/txs0102.pdf",
+          "revision": "SCES640L January 2026",
+          "pages": [
+            3,
+            5,
+            6,
+            15,
+            17,
+            19,
+            20
+          ],
+          "evidence_kind": "primary_pdf_local_snapshot",
+          "local_snapshot_file": "txs0102.pdf",
+          "pdf_sha256": "75397ef71b07af6e47b81441a502a224c59b6ac359083d71516465f0c885eaf7",
+          "observed_on": "2026-10-22",
+          "verification": "source_linked_not_human_qualified"
+        }
+      ],
+      "skus": [
+        {
+          "supplier": "Texas Instruments",
+          "sku": "TXS0102DCTR",
+          "url": "https://www.ti.com/product/TXS0102/part-details/TXS0102DCTR",
+          "observed_on": "2026-10-22",
+          "live_stock_and_price": "not_checked"
+        }
+      ],
+      "selection_basis": "DCT pin table checked visually against local symbol; local SSOP land pattern is nominal only. Exact component must be bound separately. No proof of AM2302 protocol timing, VOL/VOH at actual loads, cable capacitance, power-up firmware or actual assembly.",
+      "package_validation": "nominal_land_pattern_only",
+      "physical_sample_tested": false,
+      "qualification": "source_linked_candidate_not_human_qualified"
+    },
+    {
+      "manufacturer": "RECOM Power",
+      "mpn": "R-78K3.3-1.0",
+      "kind": "regulator",
+      "symbol_id": "PCB_MCP:R78K3V3_1A",
+      "footprint_id": "Converter_PCB_MCP:R78K_SIP3_Conservative_THT",
+      "supply_min_v": 4.5,
+      "supply_max_v": 36.0,
+      "output_nominal_v": 3.3,
+      "rated_output_current_a": 1.0,
+      "output_set_accuracy_fraction": 0.035,
+      "line_regulation_fraction": 0.005,
+      "load_regulation_fraction": 0.035,
+      "pin_mapping": {
+        "1": "IN",
+        "2": "GND",
+        "3": "OUT"
+      },
+      "sources": [
+        {
+          "url": "https://recom-power.com/pdf/Innoline/R-78K-1.0.pdf",
+          "revision": "Rev. 6-2025",
+          "pages": [
+            1,
+            2,
+            5,
+            7
+          ],
+          "observed_on": "2026-10-22",
+          "evidence_kind": "primary_web_pdf_fact_extract_local_snapshot",
+          "local_snapshot_file": "r78k-extract.json",
+          "snapshot_sha256": "1fc4e5ce156be827d1bf0795546d642a6632a39f2b1abb2fe4438017bcc5b726",
+          "verification": "Primary PDF read through web; direct downloads returned HTTP403; selected facts only, source drawing not visually recovered"
+        }
+      ],
+      "skus": [
+        {
+          "supplier": "RECOM manufacturer identity",
+          "sku": "R-78K3.3-1.0",
+          "url": "https://recom-power.com/en/products/switching-regulators/switching-regulators-sip/rec-p-R-78K3.3-1.0.html",
+          "live_stock_and_price": "not_checked"
+        }
+      ],
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "package_validation": "Source pin order/pitch; custom conservative courtyard and 1.2mm drill; detailed body origin/drawing and assembly unqualified",
+      "physical_sample_tested": false,
+      "scope": "25C reference DC screening; thermal, ripple, transient, reverse current and full load bounds unqualified"
+    },
+    {
+      "manufacturer": "Texas Instruments",
+      "mpn": "TUSB320LAIRWBR",
+      "kind": "cc_controller",
+      "symbol_id": "PCB_MCP:TUSB320LAI_GPIO",
+      "footprint_id": "Package_DFN_QFN:Texas_X2QFN-12_1.6x1.6mm_P0.4mm",
+      "supply_min_v": 2.7,
+      "supply_max_v": 5.0,
+      "pin_mapping": {
+        "1": "CC1",
+        "2": "CC2",
+        "3": "PORT",
+        "4": "VBUS_DET",
+        "5": "ADDR",
+        "6": "OUT3",
+        "7": "OUT1",
+        "8": "OUT2",
+        "9": "ID",
+        "10": "GND",
+        "11": "EN_N",
+        "12": "VDD"
+      },
+      "sources": [
+        {
+          "url": "https://www.ti.com/lit/ds/symlink/tusb320lai.pdf",
+          "revision": "SLLSEQ8D May 2017",
+          "observed_on": "2026-10-22",
+          "evidence_kind": "primary_pdf_local_snapshot",
+          "local_snapshot_file": "tusb320lai.pdf",
+          "pdf_sha256": "62f7b3f65338e25ebd6fd46ef04474ba806b06b1cc04bc0b3d7b8191b01ca87d",
+          "verification": "source_linked_not_human_qualified"
+        }
+      ],
+      "skus": [
+        {
+          "supplier": "Texas Instruments",
+          "sku": "TUSB320LAIRWBR",
+          "url": "https://www.ti.com/product/TUSB320LAI/part-details/TUSB320LAIRWBR",
+          "live_stock_and_price": "not_checked"
+        }
+      ],
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "package_validation": "real_library_nominal_land_pattern_not_physical_assembly_qualified",
+      "physical_sample_tested": false,
+      "gpio_current_truth": [
+        {
+          "out1": 1,
+          "out2": 1,
+          "mode": "unattached"
+        },
+        {
+          "out1": 1,
+          "out2": 0,
+          "mode": "default_attached"
+        },
+        {
+          "out1": 0,
+          "out2": 1,
+          "mode": "advertised_1p5a"
+        },
+        {
+          "out1": 0,
+          "out2": 0,
+          "mode": "advertised_3a"
+        }
+      ],
+      "internal_rd": true,
+      "vbus_detect_resistor_nominal_ohm": 887000.0
+    },
+    {
+      "manufacturer": "Texas Instruments",
+      "mpn": "TPS2553DBVR",
+      "kind": "power_switch",
+      "symbol_id": "PCB_MCP:TPS2553DBV",
+      "footprint_id": "Package_TO_SOT_SMD:SOT-23-6",
+      "supply_min_v": 2.5,
+      "supply_max_v": 6.5,
+      "pin_mapping": {
+        "1": "IN",
+        "2": "GND",
+        "3": "EN",
+        "4": "FAULT_N",
+        "5": "ILIM",
+        "6": "OUT"
+      },
+      "sources": [
+        {
+          "url": "https://www.ti.com/lit/ds/symlink/tps2553.pdf",
+          "revision": "SLVS841F August 2016",
+          "observed_on": "2026-10-22",
+          "evidence_kind": "primary_pdf_local_snapshot",
+          "local_snapshot_file": "tps2553.pdf",
+          "pdf_sha256": "88e453700cea2b263cdb5b44fce1e883e0f6d3b975457f879ac1423eeea42071",
+          "verification": "source_linked_not_human_qualified"
+        }
+      ],
+      "skus": [
+        {
+          "supplier": "Texas Instruments",
+          "sku": "TPS2553DBVR",
+          "url": "https://www.ti.com/product/TPS2553/part-details/TPS2553DBVR",
+          "live_stock_and_price": "not_checked"
+        }
+      ],
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "package_validation": "real_library_nominal_land_pattern_not_physical_assembly_qualified",
+      "physical_sample_tested": false,
+      "rds_on_max_ohm": 0.135,
+      "active_high_enable": true,
+      "current_limit_equations": {
+        "max_coefficient": 22980.0,
+        "max_exponent": 0.94,
+        "min_coefficient": 25230.0,
+        "min_exponent": 1.016,
+        "resistance_unit": "kohm",
+        "result_unit": "mA"
+      },
+      "current_limit_resistor_nominal_ohm": 30100.0,
+      "current_limit_resistor_fraction_assumption": 0.01
+    },
+    {
+      "manufacturer": "Texas Instruments",
+      "mpn": "SN74LVC1G14DBVR",
+      "kind": "logic_gate",
+      "symbol_id": "PCB_MCP:SN74LVC1G14_DBV",
+      "footprint_id": "Package_TO_SOT_SMD:SOT-23-5",
+      "supply_min_v": 1.65,
+      "supply_max_v": 5.5,
+      "pin_mapping": {
+        "1": "NC",
+        "2": "A",
+        "3": "GND",
+        "4": "Y",
+        "5": "VCC"
+      },
+      "sources": [
+        {
+          "url": "https://www.ti.com/lit/ds/symlink/sn74lvc1g14.pdf",
+          "revision": "SCES218AA October 2025",
+          "observed_on": "2026-10-22",
+          "evidence_kind": "primary_pdf_local_snapshot",
+          "local_snapshot_file": "sn74lvc1g14.pdf",
+          "pdf_sha256": "c21067b4f4119d0981fb2e8d73b987b0e661c86f7bb0ed161f23a4b599fd68a7",
+          "verification": "source_linked_not_human_qualified"
+        }
+      ],
+      "skus": [
+        {
+          "supplier": "Texas Instruments",
+          "sku": "SN74LVC1G14DBVR",
+          "url": "https://www.ti.com/product/SN74LVC1G14/part-details/SN74LVC1G14DBVR",
+          "live_stock_and_price": "not_checked"
+        }
+      ],
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "package_validation": "real_library_nominal_land_pattern_not_physical_assembly_qualified",
+      "physical_sample_tested": false
+    },
+    {
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "physical_sample_tested": false,
+      "skus": [],
+      "package_validation": "nominal_package_identity_only_not_land_pattern_or_assembly_qualification",
+      "manufacturer": "Vishay",
+      "mpn": "CRCW060310K0FKEA",
+      "kind": "resistor",
+      "symbol_id": "Device:R",
+      "footprint_id": "Resistor_SMD:R_0603_1608Metric",
+      "value_ohm": 10000.0,
+      "tolerance_fraction": 0.01,
+      "rated_power_w": 0.1,
+      "voltage_rating_v": 75.0,
+      "temperature_coefficient_ppm_per_k": 100.0,
+      "temperature_range_c": [
+        -55.0,
+        155.0
+      ],
+      "power_rating_conditions": "Standard operating mode P70, subject to permitted film temperature and PCB thermal resistance; no temperature rise proof",
+      "pin_mapping": {
+        "1": "passive",
+        "2": "passive"
+      },
+      "selection_basis": "Finite reviewed order codes decoded using manufacturer ordering table, E24/E96 ranges and EA packaging; no distributor SKU asserted",
+      "sources": [
+        {
+          "title": "Vishay D/CRCW e3, revision 14-Apr-2026, pages 1-3,7",
+          "url": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+          "local_snapshot_file": "vishay-dcrcwe3-2026.pdf",
+          "pdf_sha256": "4be046f9e6242f81255792de96cc7b2e11c9ad9cf86e411b0b9db401e7b5d54c"
+        }
+      ]
+    },
+    {
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "physical_sample_tested": false,
+      "skus": [],
+      "package_validation": "nominal_package_identity_only_not_land_pattern_or_assembly_qualification",
+      "manufacturer": "Vishay",
+      "mpn": "CRCW0603100KFKEA",
+      "kind": "resistor",
+      "symbol_id": "Device:R",
+      "footprint_id": "Resistor_SMD:R_0603_1608Metric",
+      "value_ohm": 100000.0,
+      "tolerance_fraction": 0.01,
+      "rated_power_w": 0.1,
+      "voltage_rating_v": 75.0,
+      "temperature_coefficient_ppm_per_k": 100.0,
+      "temperature_range_c": [
+        -55.0,
+        155.0
+      ],
+      "power_rating_conditions": "Standard operating mode P70, subject to permitted film temperature and PCB thermal resistance; no temperature rise proof",
+      "pin_mapping": {
+        "1": "passive",
+        "2": "passive"
+      },
+      "selection_basis": "Finite reviewed order codes decoded using manufacturer ordering table, E24/E96 ranges and EA packaging; no distributor SKU asserted",
+      "sources": [
+        {
+          "title": "Vishay D/CRCW e3, revision 14-Apr-2026, pages 1-3,7",
+          "url": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+          "local_snapshot_file": "vishay-dcrcwe3-2026.pdf",
+          "pdf_sha256": "4be046f9e6242f81255792de96cc7b2e11c9ad9cf86e411b0b9db401e7b5d54c"
+        }
+      ]
+    },
+    {
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "physical_sample_tested": false,
+      "skus": [],
+      "package_validation": "nominal_package_identity_only_not_land_pattern_or_assembly_qualification",
+      "manufacturer": "Vishay",
+      "mpn": "CRCW0603100RFKEA",
+      "kind": "resistor",
+      "symbol_id": "Device:R",
+      "footprint_id": "Resistor_SMD:R_0603_1608Metric",
+      "value_ohm": 100.0,
+      "tolerance_fraction": 0.01,
+      "rated_power_w": 0.1,
+      "voltage_rating_v": 75.0,
+      "temperature_coefficient_ppm_per_k": 100.0,
+      "temperature_range_c": [
+        -55.0,
+        155.0
+      ],
+      "power_rating_conditions": "Standard operating mode P70, subject to permitted film temperature and PCB thermal resistance; no temperature rise proof",
+      "pin_mapping": {
+        "1": "passive",
+        "2": "passive"
+      },
+      "selection_basis": "Finite reviewed order codes decoded using manufacturer ordering table, E24/E96 ranges and EA packaging; no distributor SKU asserted",
+      "sources": [
+        {
+          "title": "Vishay D/CRCW e3, revision 14-Apr-2026, pages 1-3,7",
+          "url": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+          "local_snapshot_file": "vishay-dcrcwe3-2026.pdf",
+          "pdf_sha256": "4be046f9e6242f81255792de96cc7b2e11c9ad9cf86e411b0b9db401e7b5d54c"
+        }
+      ]
+    },
+    {
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "physical_sample_tested": false,
+      "skus": [],
+      "package_validation": "nominal_package_identity_only_not_land_pattern_or_assembly_qualification",
+      "manufacturer": "Vishay",
+      "mpn": "CRCW0603887KFKEA",
+      "kind": "resistor",
+      "symbol_id": "Device:R",
+      "footprint_id": "Resistor_SMD:R_0603_1608Metric",
+      "value_ohm": 887000.0,
+      "tolerance_fraction": 0.01,
+      "rated_power_w": 0.1,
+      "voltage_rating_v": 75.0,
+      "temperature_coefficient_ppm_per_k": 100.0,
+      "temperature_range_c": [
+        -55.0,
+        155.0
+      ],
+      "power_rating_conditions": "Standard operating mode P70, subject to permitted film temperature and PCB thermal resistance; no temperature rise proof",
+      "pin_mapping": {
+        "1": "passive",
+        "2": "passive"
+      },
+      "selection_basis": "Finite reviewed order codes decoded using manufacturer ordering table, E24/E96 ranges and EA packaging; no distributor SKU asserted",
+      "sources": [
+        {
+          "title": "Vishay D/CRCW e3, revision 14-Apr-2026, pages 1-3,7",
+          "url": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+          "local_snapshot_file": "vishay-dcrcwe3-2026.pdf",
+          "pdf_sha256": "4be046f9e6242f81255792de96cc7b2e11c9ad9cf86e411b0b9db401e7b5d54c"
+        }
+      ]
+    },
+    {
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "physical_sample_tested": false,
+      "skus": [],
+      "package_validation": "nominal_package_identity_only_not_land_pattern_or_assembly_qualification",
+      "manufacturer": "Vishay",
+      "mpn": "CRCW060330K1FKEA",
+      "kind": "resistor",
+      "symbol_id": "Device:R",
+      "footprint_id": "Resistor_SMD:R_0603_1608Metric",
+      "value_ohm": 30100.0,
+      "tolerance_fraction": 0.01,
+      "rated_power_w": 0.1,
+      "voltage_rating_v": 75.0,
+      "temperature_coefficient_ppm_per_k": 100.0,
+      "temperature_range_c": [
+        -55.0,
+        155.0
+      ],
+      "power_rating_conditions": "Standard operating mode P70, subject to permitted film temperature and PCB thermal resistance; no temperature rise proof",
+      "pin_mapping": {
+        "1": "passive",
+        "2": "passive"
+      },
+      "selection_basis": "Finite reviewed order codes decoded using manufacturer ordering table, E24/E96 ranges and EA packaging; no distributor SKU asserted",
+      "sources": [
+        {
+          "title": "Vishay D/CRCW e3, revision 14-Apr-2026, pages 1-3,7",
+          "url": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+          "local_snapshot_file": "vishay-dcrcwe3-2026.pdf",
+          "pdf_sha256": "4be046f9e6242f81255792de96cc7b2e11c9ad9cf86e411b0b9db401e7b5d54c"
+        }
+      ]
+    },
+    {
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "physical_sample_tested": false,
+      "skus": [],
+      "package_validation": "nominal_package_identity_only_not_land_pattern_or_assembly_qualification",
+      "manufacturer": "TDK",
+      "mpn": "C1608X7R1H104K080AA",
+      "kind": "capacitor",
+      "symbol_id": "Device:C",
+      "footprint_id": "Capacitor_SMD:C_0603_1608Metric",
+      "sources": [
+        {
+          "title": "tdk-C1608X7R1H104K080AA.json",
+          "url": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1H104K080AA",
+          "evidence_kind": "primary_web_pdf_fact_extract_local_snapshot",
+          "local_snapshot_file": "tdk-C1608X7R1H104K080AA.json",
+          "snapshot_sha256": "86fcd4cc2816926a2419df02735924a7f257ffb629a6ea3332ef9c0a9a7dad2e",
+          "scope": "Selected facts manually checked against primary page; not a complete manufacturer specification or live procurement record"
+        }
+      ],
+      "capacitance_f": 1e-07,
+      "voltage_rating_v": 50.0,
+      "dielectric": "X7R",
+      "tolerance_fraction": 0.1,
+      "temperature_range_c": [
+        -55.0,
+        125.0
+      ],
+      "metric_dimensions_mm": [
+        1.6,
+        0.8,
+        0.8
+      ],
+      "product_status_at_retrieval": "Production",
+      "effective_capacitance_under_bias": "not_qualified",
+      "polarized": false,
+      "pin_mapping": {
+        "1": "nonpolar",
+        "2": "nonpolar"
+      },
+      "selection_basis": "Primary manufacturer product page nominal rating and case size; generic KiCad land pattern remains unqualified"
+    },
+    {
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "physical_sample_tested": false,
+      "skus": [],
+      "package_validation": "nominal_package_identity_only_not_land_pattern_or_assembly_qualification",
+      "manufacturer": "TDK",
+      "mpn": "C1608X5R1C105K080AA",
+      "kind": "capacitor",
+      "symbol_id": "Device:C",
+      "footprint_id": "Capacitor_SMD:C_0603_1608Metric",
+      "sources": [
+        {
+          "title": "tdk-C1608X5R1C105K080AA.json",
+          "url": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X5R1C105K080AA",
+          "evidence_kind": "primary_web_pdf_fact_extract_local_snapshot",
+          "local_snapshot_file": "tdk-C1608X5R1C105K080AA.json",
+          "snapshot_sha256": "e6ee7fb6dd5c89d746b2d10f7dcadbab37d73d8d7e63b6040d1f18d70856b0d1",
+          "scope": "Selected facts manually checked against primary page; not a complete manufacturer specification or live procurement record"
+        }
+      ],
+      "capacitance_f": 1e-06,
+      "voltage_rating_v": 16.0,
+      "dielectric": "X5R",
+      "tolerance_fraction": 0.1,
+      "temperature_range_c": [
+        -55.0,
+        85.0
+      ],
+      "metric_dimensions_mm": [
+        1.6,
+        0.8,
+        0.8
+      ],
+      "product_status_at_retrieval": "Production",
+      "effective_capacitance_under_bias": "not_qualified",
+      "polarized": false,
+      "pin_mapping": {
+        "1": "nonpolar",
+        "2": "nonpolar"
+      },
+      "selection_basis": "Primary manufacturer product page nominal rating and case size; generic KiCad land pattern remains unqualified"
+    },
+    {
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "physical_sample_tested": false,
+      "skus": [],
+      "package_validation": "nominal_package_identity_only_not_land_pattern_or_assembly_qualification",
+      "manufacturer": "TDK",
+      "mpn": "C2012X5R1V106K125AC",
+      "kind": "capacitor",
+      "symbol_id": "Device:C",
+      "footprint_id": "Capacitor_SMD:C_0805_2012Metric",
+      "sources": [
+        {
+          "title": "tdk-C2012X5R1V106K125AC.json",
+          "url": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X5R1V106K125AC",
+          "evidence_kind": "primary_web_pdf_fact_extract_local_snapshot",
+          "local_snapshot_file": "tdk-C2012X5R1V106K125AC.json",
+          "snapshot_sha256": "5f17eb83cd79d6cc8c6febbd06892822bffad6912bfc28b6d64056df187bbf0b",
+          "scope": "Selected facts manually checked against primary page; not a complete manufacturer specification or live procurement record"
+        }
+      ],
+      "capacitance_f": 1e-05,
+      "voltage_rating_v": 35.0,
+      "dielectric": "X5R",
+      "tolerance_fraction": 0.1,
+      "temperature_range_c": [
+        -55.0,
+        85.0
+      ],
+      "metric_dimensions_mm": [
+        2.0,
+        1.25,
+        1.25
+      ],
+      "product_status_at_retrieval": "Production",
+      "effective_capacitance_under_bias": "not_qualified",
+      "polarized": false,
+      "pin_mapping": {
+        "1": "nonpolar",
+        "2": "nonpolar"
+      },
+      "selection_basis": "Primary manufacturer product page nominal rating and case size; generic KiCad land pattern remains unqualified"
+    },
+    {
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "physical_sample_tested": false,
+      "skus": [],
+      "package_validation": "nominal_package_identity_only_not_land_pattern_or_assembly_qualification",
+      "manufacturer": "GCT",
+      "mpn": "USB4105-GF-A",
+      "kind": "connector",
+      "symbol_id": "Connector:USB_C_Receptacle_USB2.0_16P",
+      "footprint_id": "Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal",
+      "sources": [
+        {
+          "title": "GCT USB4105 drawing B4,18-Dec-2023, page1",
+          "url": "https://gct.co/files/drawings/usb4105.pdf",
+          "local_snapshot_file": "gct-usb4105.pdf",
+          "pdf_sha256": "fb331fbabee8392ed2937ed757c1610cb0f174b84625147c0b580a18eea8c0e5"
+        }
+      ],
+      "rated_current_a": 5.0,
+      "current_rating_scope": "Collective VBUS pins only; 6.25A collective GND; 1.25A CC; 0.25A other pins. No USB compliance or source current guarantee.",
+      "voltage_rating_v": 48.0,
+      "temperature_range_c": [
+        -40.0,
+        85.0
+      ],
+      "selection_basis": "GF gold flash, A tape/reel, default shell stake per manufacturer ordering grid; library footprint nominal geometry not physically qualified"
+    },
+    {
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "physical_sample_tested": false,
+      "package_validation": "nominal_drawing_and_library_pairing_not_tolerance_or_assembly_qualification",
+      "skus": [],
+      "manufacturer": "Wurth Elektronik",
+      "mpn": "61300611121",
+      "kind": "connector",
+      "symbol_id": "Connector_Generic:Conn_01x06",
+      "footprint_id": "Connector_PCB_MCP:WR_PHD_1x06_P2.54mm_Drill1.10mm",
+      "sources": [
+        {
+          "title": "Wurth 61300611121 primary PDF, rev004.000, pages1-2 selected facts",
+          "url": "https://www.we-online.com/components/products/datasheet/61300611121.pdf",
+          "local_snapshot_file": "wurth-61300611121-extract.json",
+          "snapshot_sha256": "3abb9b45ac896b41f568f38e4c71bae0c560bc3fe595f39af9596d96b0a1f510",
+          "evidence_kind": "primary_web_pdf_fact_extract_local_snapshot"
+        }
+      ],
+      "rated_current_a": 3.0,
+      "dimensions": {
+        "manufacturer": "Wurth Elektronik",
+        "mpn": "61300611121",
+        "revision": "004.000 2025-11-08",
+        "pin_count": 6,
+        "pitch_mm": 2.54,
+        "span_mm": 12.7,
+        "body_length_mm": 15.24,
+        "recommended_hole_diameter_mm": 1.1,
+        "hole_tolerance_mm": 0.15,
+        "pitch_tolerance_mm": 0.05,
+        "pin_square_width_mm": 0.64,
+        "pin_square_width_tolerance_mm": 0.15,
+        "rated_current_a": 3.0,
+        "working_voltage_ac_v": 250.0,
+        "temperature_range_c": [
+          -40.0,
+          105.0
+        ],
+        "source_pages": [
+          1,
+          2
+        ],
+        "scope": "Selected primary PDF facts verified through web text; direct file download returned HTTP 403. This is not the full PDF or a physical fit qualification."
+      },
+      "pin_mapping": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6"
+      },
+      "selection_basis": "Manufacturer six straight leads; 2.54mm pitch and 1.10mm recommended holes; no distributor SKU or availability asserted"
+    },
+    {
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "physical_sample_tested": false,
+      "package_validation": "nominal_drawing_and_library_pairing_not_tolerance_or_assembly_qualification",
+      "skus": [],
+      "manufacturer": "Panasonic",
+      "mpn": "EEAFC1V270",
+      "kind": "capacitor",
+      "symbol_id": "Device:C_Polarized",
+      "footprint_id": "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm",
+      "capacitance_f": 2.7e-05,
+      "voltage_rating_v": 35.0,
+      "tolerance_fraction": 0.2,
+      "dielectric": "aluminum_oxide",
+      "technology": "aluminum_electrolytic",
+      "polarized": true,
+      "pin_mapping": {
+        "1": "positive",
+        "2": "negative"
+      },
+      "temperature_range_c": [
+        -55.0,
+        105.0
+      ],
+      "dimensions": {
+        "diameter_mm": 6.3,
+        "diameter_tolerance_mm": 0.5,
+        "body_length_mm": 7.0,
+        "lead_pitch_mm": 2.5,
+        "lead_pitch_tolerance_mm": 0.5,
+        "lead_diameter_mm": 0.45,
+        "lead_diameter_tolerance_mm": 0.05
+      },
+      "ripple_current_a": 0.2,
+      "ripple_rating_conditions": "100kHz,105C; not the actual board waveform",
+      "impedance_max_ohm": 0.45,
+      "impedance_rating_conditions": "100kHz,20C; not a universal ESR value",
+      "endurance_hours": 1000,
+      "endurance_conditions": "Catalog endurance test at105C and specified voltage/ripple; not board service life",
+      "lifecycle": "Listed without EOL mark in 2025-09-01 catalog; live stock and later lifecycle changes not checked",
+      "selection_basis": "Straight-lead EEA variant 6.3x7mm,2.5mm pitch; do not silently use5mm lead-form B variant or EEU5mm-body variant. Page7 row visually reviewed.",
+      "sources": [
+        {
+          "title": "Panasonic FC-A catalog 01-Sep-2025, pages1,7",
+          "url": "https://industrial.panasonic.com/cdbs/www-data/pdf/RDF0000/RDF0000C1269.pdf",
+          "local_snapshot_file": "panasonic-fc-a.pdf",
+          "pdf_sha256": "86b294892931c6810cc6155a18086eda1a4b42ca17f8132f6380105da2dbf1c5",
+          "evidence_kind": "primary_pdf_local_snapshot"
+        }
+      ]
+    },
+    {
+      "manufacturer": "Texas Instruments",
+      "mpn": "SN74LVC1G07DBVR",
+      "kind": "logic_gate",
+      "symbol_id": "74xGxx:74LVC1G07",
+      "footprint_id": "Package_TO_SOT_SMD:SOT-23-5",
+      "supply_min_v": 1.65,
+      "supply_max_v": 5.5,
+      "input_max_v": 5.5,
+      "pin_mapping": {
+        "1": "NC",
+        "2": "A",
+        "3": "GND",
+        "4": "Y",
+        "5": "VCC"
+      },
+      "signal_role": "open_drain_driver",
+      "supply_pins": [
+        "VCC"
+      ],
+      "power_budget_model": "supply_pin_load",
+      "input_pin_number": "2",
+      "output_pin_number": "4",
+      "supply_pin_number": "5",
+      "ground_pin_number": "3",
+      "input_leakage_max_a": 5e-06,
+      "quiescent_max_a": 1e-05,
+      "sources": [
+        {
+          "url": "https://www.ti.com/lit/ds/symlink/sn74lvc1g07.pdf",
+          "revision": "SCES296AG October 2025",
+          "evidence_kind": "primary_pdf_local_snapshot",
+          "local_snapshot_file": "sn74lvc1g07.pdf",
+          "pdf_sha256": "1e175728fccf85295e744a60420f48b1feb23f7f0061b8c73d70f81a6903f59e",
+          "observed_on": "2026-10-23",
+          "verification": "primary_pin_and_electrical_tables_checked"
+        }
+      ],
+      "skus": [],
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "package_validation": "Manufacturer DBV pin table paired with actual KiCad SOT-23-5 pads; sample not assembled",
+      "input_high_min_v": 2.0,
+      "input_low_max_v": 0.8,
+      "logic_supply_range_v": [
+        3.0,
+        3.6
+      ],
+      "output_low_max_v": 0.55,
+      "output_low_test_current_a": 0.024,
+      "output_max_v": 5.5,
+      "partial_powerdown_leakage_max_a": 1e-05
+    },
+    {
+      "manufacturer": "Texas Instruments",
+      "mpn": "SN74LVC1G17DBVR",
+      "kind": "logic_gate",
+      "symbol_id": "74xGxx:74LVC1G17",
+      "footprint_id": "Package_TO_SOT_SMD:SOT-23-5",
+      "supply_min_v": 1.65,
+      "supply_max_v": 5.5,
+      "input_max_v": 5.5,
+      "pin_mapping": {
+        "1": "NC",
+        "2": "A",
+        "3": "GND",
+        "4": "Y",
+        "5": "VCC"
+      },
+      "signal_role": "schmitt_receiver",
+      "supply_pins": [
+        "VCC"
+      ],
+      "power_budget_model": "supply_pin_load",
+      "input_pin_number": "2",
+      "output_pin_number": "4",
+      "supply_pin_number": "5",
+      "ground_pin_number": "3",
+      "input_leakage_max_a": 5e-06,
+      "quiescent_max_a": 1e-05,
+      "sources": [
+        {
+          "url": "https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf",
+          "revision": "SCES351Y October 2025",
+          "evidence_kind": "primary_pdf_local_snapshot",
+          "local_snapshot_file": "sn74lvc1g17.pdf",
+          "pdf_sha256": "c76fa723fac4502423967a1aa087dd669106b52b8de620c024b26e56f5d59309",
+          "observed_on": "2026-10-23",
+          "verification": "primary_pin_and_electrical_tables_checked"
+        }
+      ],
+      "skus": [],
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "package_validation": "Manufacturer DBV pin table paired with actual KiCad SOT-23-5 pads; sample not assembled",
+      "threshold_table_vcc_v": [
+        1.65,
+        2.3,
+        3.0,
+        4.5,
+        5.5
+      ],
+      "positive_threshold_max_v": [
+        1.13,
+        1.56,
+        1.92,
+        2.74,
+        3.33
+      ],
+      "negative_threshold_min_v": [
+        0.35,
+        0.56,
+        0.89,
+        1.51,
+        1.88
+      ],
+      "output_high_drop_max_v": 0.1,
+      "output_low_max_v": 0.1,
+      "output_logic_test_load_max_a": 0.0001
+    },
+    {
+      "manufacturer": "Texas Instruments",
+      "mpn": "TLC555CDR",
+      "kind": "timer",
+      "symbol_id": "Timer:TLC555xD",
+      "footprint_id": "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
+      "power_budget_model": "supply_pin_load",
+      "supply_pins": [
+        "VCC"
+      ],
+      "supply_min_v": 2.0,
+      "supply_max_v": 15.0,
+      "temperature_range_c": [
+        0.0,
+        70.0
+      ],
+      "quiescent_current_max_a_at5v": 0.0005,
+      "output_sink_pin_numbers": [
+        "3"
+      ],
+      "sink_reference_current_a_at5v": 0.008,
+      "sink_reference_low_max_v_at5v": 0.5,
+      "circuit_model": "555_astable",
+      "local_passive_pin_numbers": [
+        "2",
+        "5",
+        "6",
+        "7"
+      ],
+      "pin_mapping": {
+        "1": "GND",
+        "2": "TRIG",
+        "3": "OUT",
+        "4": "RESET",
+        "5": "CONT",
+        "6": "THRES",
+        "7": "DISCH",
+        "8": "VDD"
+      },
+      "sources": [
+        {
+          "title": "TI TLC555 SLFS043K January2026, pin table, 5V electrical table and astable application",
+          "url": "https://www.ti.com/lit/ds/symlink/tlc555.pdf",
+          "local_snapshot_file": "tlc555-2026.pdf",
+          "pdf_sha256": "1e4a94a0d87fb9a02d2b2030c3bd63113c1b020db8c4a23b4696f920a686b6d9"
+        }
+      ],
+      "skus": [
+        {
+          "supplier": "TI manufacturer identity",
+          "sku": "TLC555CDR",
+          "url": "https://www.ti.com/product/TLC555/part-details/TLC555CDR",
+          "live_stock_and_price": "not_selected_or_guaranteed"
+        }
+      ],
+      "package_validation": "source D package and actual SOIC8 pin identity; sample not tested",
+      "physical_sample_tested": false,
+      "qualification": "source_linked_candidate_not_human_qualified"
+    },
+    {
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "physical_sample_tested": false,
+      "skus": [],
+      "package_validation": "nominal_package_identity_only_not_land_pattern_or_assembly_qualification",
+      "manufacturer": "Vishay",
+      "mpn": "CRCW06035K10FKEA",
+      "kind": "resistor",
+      "symbol_id": "Device:R",
+      "footprint_id": "Resistor_SMD:R_0603_1608Metric",
+      "value_ohm": 5100.0,
+      "tolerance_fraction": 0.01,
+      "rated_power_w": 0.1,
+      "voltage_rating_v": 75.0,
+      "temperature_coefficient_ppm_per_k": 100.0,
+      "temperature_range_c": [
+        -55.0,
+        155.0
+      ],
+      "power_rating_conditions": "Standard operating mode P70, subject to permitted film temperature and PCB thermal resistance; no temperature rise proof",
+      "pin_mapping": {
+        "1": "passive",
+        "2": "passive"
+      },
+      "selection_basis": "Manufacturer ordering table for5K10 and1% code; exact MPN also listed in Vishay evaluation documentation https://www.vishay.com/doc/?74254=",
+      "sources": [
+        {
+          "title": "Vishay D/CRCW e3, revision 14-Apr-2026, pages 1-3,7",
+          "url": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+          "local_snapshot_file": "vishay-dcrcwe3-2026.pdf",
+          "pdf_sha256": "4be046f9e6242f81255792de96cc7b2e11c9ad9cf86e411b0b9db401e7b5d54c"
+        }
+      ]
+    },
+    {
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "physical_sample_tested": false,
+      "skus": [],
+      "package_validation": "source_nominal_land_pattern_and_pin_identity_only",
+      "manufacturer": "Texas Instruments",
+      "mpn": "TPSM82821ASILR",
+      "kind": "regulator",
+      "symbol_id": "PCB_MCP:TPSM82821A_SIL",
+      "footprint_id": "Converter_PCB_MCP:TI_SIL0010D_2x2.5mm_P0.5mm",
+      "supply_min_v": 2.4,
+      "supply_max_v": 5.5,
+      "rated_output_current_a": 1.0,
+      "feedback_min_v": 0.594,
+      "feedback_nominal_v": 0.6,
+      "feedback_max_v": 0.606,
+      "feedback_leakage_max_a": 5e-08,
+      "mode": "forced_PWM",
+      "power_stage_model": "adjustable_pwm_buck",
+      "pin_mapping": {
+        "[1,2]": "IN",
+        "3": "EN",
+        "4": "PG",
+        "[5,6,7]": "OUT",
+        "8": "FB",
+        "[9,10]": "GND"
+      },
+      "physical_pin_mapping": {
+        "1": "VIN",
+        "2": "VIN",
+        "3": "EN",
+        "4": "PG",
+        "5": "VOUT",
+        "6": "VOUT",
+        "7": "VOUT",
+        "8": "FB",
+        "9": "GND",
+        "10": "GND"
+      },
+      "minimum_effective_input_capacitance_f": 3e-06,
+      "minimum_effective_output_capacitance_f": 5e-06,
+      "nominal_input_capacitance_min_f": 4.7e-06,
+      "nominal_output_capacitance_range_f": [
+        1e-05,
+        4.7e-05
+      ],
+      "feedback_bottom_max_ohm": 100000.0,
+      "feedforward_time_s": 1.2e-05,
+      "thermal_junction_range_c": [
+        -40.0,
+        125.0
+      ],
+      "sources": [
+        {
+          "url": "https://www.ti.com/lit/ds/symlink/tpsm82821.pdf",
+          "local_snapshot_file": "tpsm82821.pdf",
+          "pdf_sha256": "e872dfc8b0894be4c2a8a5a3c29bbfd33674d4902f157ea484f19c8765ed3167",
+          "revision": "SLVSEP0F November2021; downloaded2026-10-26 incl2026 packing addendum",
+          "pages": [
+            3,
+            4,
+            5,
+            12,
+            13,
+            42,
+            47,
+            48
+          ],
+          "evidence_kind": "primary_pdf_local_snapshot"
+        }
+      ],
+      "selection_basis": "ForcedPWM adjustable variant; feedback interval uses actual source-bound divider R tolerance/TCR and leakage; external effective capacitance, ripple and transient verification remain separate"
+    },
+    {
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "physical_sample_tested": false,
+      "skus": [],
+      "package_validation": "source_nominal_land_pattern_and_pin_identity_only",
+      "manufacturer": "Vishay",
+      "mpn": "TNPW0805453KBEEA",
+      "kind": "resistor",
+      "symbol_id": "Device:R",
+      "footprint_id": "Resistor_SMD:R_0805_2012Metric",
+      "value_ohm": 453000.0,
+      "tolerance_fraction": 0.001,
+      "rated_power_w": 0.14,
+      "voltage_rating_v": 150.0,
+      "temperature_coefficient_ppm_per_k": 25.0,
+      "temperature_range_c": [
+        -55.0,
+        175.0
+      ],
+      "pin_mapping": {
+        "1": "passive",
+        "2": "passive"
+      },
+      "sources": [
+        {
+          "url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+          "local_snapshot_file": "tnpw_e3.pdf",
+          "pdf_sha256": "6f0508c568cb355aaf2accdd33fe3a780d3ea5ef207c4c9a71839a8acadc33a5",
+          "revision": "10-Apr-2026",
+          "pages": [
+            1,
+            3,
+            4
+          ],
+          "evidence_kind": "primary_pdf_local_snapshot"
+        }
+      ],
+      "selection_basis": "Manufacturer ordering table:0805,4-digit resistance,B0.1%,E25ppm,EApack; within1M range.0.14W general125C-film operating mode from p2; full family-55..175C TCR span conservatively retained; no live SKU/stock assertion"
+    },
+    {
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "physical_sample_tested": false,
+      "skus": [],
+      "package_validation": "source_nominal_land_pattern_and_pin_identity_only",
+      "manufacturer": "Vishay",
+      "mpn": "TNPW0805100KBEEA",
+      "kind": "resistor",
+      "symbol_id": "Device:R",
+      "footprint_id": "Resistor_SMD:R_0805_2012Metric",
+      "value_ohm": 100000.0,
+      "tolerance_fraction": 0.001,
+      "rated_power_w": 0.14,
+      "voltage_rating_v": 150.0,
+      "temperature_coefficient_ppm_per_k": 25.0,
+      "temperature_range_c": [
+        -55.0,
+        175.0
+      ],
+      "pin_mapping": {
+        "1": "passive",
+        "2": "passive"
+      },
+      "sources": [
+        {
+          "url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+          "local_snapshot_file": "tnpw_e3.pdf",
+          "pdf_sha256": "6f0508c568cb355aaf2accdd33fe3a780d3ea5ef207c4c9a71839a8acadc33a5",
+          "revision": "10-Apr-2026",
+          "pages": [
+            1,
+            3,
+            4
+          ],
+          "evidence_kind": "primary_pdf_local_snapshot"
+        }
+      ],
+      "selection_basis": "Manufacturer ordering table:0805,4-digit resistance,B0.1%,E25ppm,EApack; within1M range.0.14W general125C-film operating mode from p2; full family-55..175C TCR span conservatively retained; no live SKU/stock assertion"
+    },
+    {
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "physical_sample_tested": false,
+      "skus": [],
+      "package_validation": "source_nominal_land_pattern_and_pin_identity_only",
+      "manufacturer": "KYOCERA AVX",
+      "mpn": "06035A121JAT2A",
+      "kind": "capacitor",
+      "symbol_id": "Device:C",
+      "footprint_id": "Capacitor_SMD:C_0603_1608Metric",
+      "capacitance_f": 1.2e-10,
+      "voltage_rating_v": 50.0,
+      "dielectric": "C0G",
+      "tolerance_fraction": 0.05,
+      "temperature_range_c": [
+        -55.0,
+        125.0
+      ],
+      "polarized": false,
+      "pin_mapping": {
+        "1": "nonpolar",
+        "2": "nonpolar"
+      },
+      "sources": [
+        {
+          "url": "https://www.ti.com/lit/ds/symlink/tpsm82821.pdf",
+          "local_snapshot_file": "tpsm82821.pdf",
+          "pdf_sha256": "e872dfc8b0894be4c2a8a5a3c29bbfd33674d4902f157ea484f19c8765ed3167",
+          "revision": "SLVSEP0F November2021; downloaded2026-10-26 incl2026 packing addendum",
+          "pages": [
+            3,
+            4,
+            5,
+            12,
+            13,
+            42,
+            47,
+            48
+          ],
+          "evidence_kind": "primary_pdf_local_snapshot"
+        },
+        {
+          "url": "https://datasheets.kyocera-avx.com/c0gnp0-dielectric.pdf",
+          "evidence_kind": "primary_web_pdf_fact_extract_local_snapshot",
+          "local_snapshot_file": "avx-c0g-web-extract.json",
+          "snapshot_sha256": "e3e66d333f2cfde3362866240093b03069a8aa8e8709dc0748196a0d7f49a080"
+        }
+      ],
+      "selection_basis": "Exact120pF50V0603 part from TI Table9-1 plus manufacturer C0G/order-code facts; no live distributor SKU asserted"
+    },
+    {
+      "manufacturer": "Texas Instruments",
+      "mpn": "TLV9001IDCKR",
+      "kind": "op_amp",
+      "symbol_id": "Amplifier_Operational:TLV9001IDCK",
+      "footprint_id": "Package_TO_SOT_SMD:SOT-353_SC-70-5",
+      "supply_min_v": 1.8,
+      "supply_max_v": 5.5,
+      "supply_pins": [
+        "V+"
+      ],
+      "ground_pins": [
+        "V-"
+      ],
+      "power_budget_model": "supply_pin_load",
+      "circuit_model": "unity_voltage_follower",
+      "terminal_numbers": {
+        "noninverting": "1",
+        "inverting": "3",
+        "output": "4",
+        "positive_supply": "5",
+        "negative_supply": "2"
+      },
+      "pin_mapping": {
+        "1": "noninverting_input",
+        "2": "negative_supply_or_ground",
+        "3": "inverting_input",
+        "4": "output",
+        "5": "positive_supply"
+      },
+      "unity_gain_stable": true,
+      "offset_max_v_at5v25c": 0.0016,
+      "input_bias_typical_a_at5v": 5e-12,
+      "quiescent_max_a_at5p5v25c": 7.7e-05,
+      "quiescent_max_a_at5p5v_fulltemp": 8.5e-05,
+      "common_mode_range_relative_to_rails_v": [
+        -0.1,
+        0.1
+      ],
+      "open_loop_gain_reference_db_at5p5v": 104.0,
+      "open_loop_gain_reference_kind": "datasheet_min_at5p5v_10kohm_not_bound_at_declared5v",
+      "reference_load_min_ohm": 100000.0,
+      "reference_cap_load_max_f": 1e-10,
+      "reference_rail_headroom_policy_v": 0.25,
+      "temperature_range_c": [
+        -40.0,
+        125.0
+      ],
+      "sources": [
+        {
+          "url": "https://www.ti.com/lit/ds/symlink/tlv9001.pdf",
+          "revision": "SBOS833R November2021,copyright2024; retrieved2026-10-26",
+          "pages": [
+            1,
+            7,
+            17,
+            18,
+            28
+          ],
+          "evidence_kind": "primary_pdf_local_snapshot",
+          "local_snapshot_file": "tlv9001-sbos833r.pdf",
+          "pdf_sha256": "01a8a8c85d59bf49e80986f30c70b550b5056138737edabbf9775c86db868fbb"
+        }
+      ],
+      "skus": [
+        {
+          "supplier": "Texas Instruments",
+          "sku": "TLV9001IDCKR",
+          "url": "https://www.ti.com/product/TLV9001/part-details/TLV9001IDCKR",
+          "live_stock_and_price": "not_checked"
+        }
+      ],
+      "selection_basis": "Actual local inherited single-unit symbol and DCK SC70 source pin table:noninverting1/output4. Not TLV9001T pinout. Current/offset/gain reference test conditions retained; total tracking error and dynamics not qualified.",
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "physical_sample_tested": false,
+      "package_validation": "nominal_source_package_and_local_land_pattern_pairing_only"
+    },
+    {
+      "manufacturer": "Analog Devices",
+      "mpn": "ADG4612BRUZ",
+      "kind": "analog_switch",
+      "symbol_id": "PCB_MCP:ADG4612BRUZ",
+      "footprint_id": "Package_SO:TSSOP-16_4.4x5mm_P0.65mm",
+      "supply_min_v": 2.7,
+      "supply_max_v": 16.0,
+      "supply_pins": [
+        "VDD"
+      ],
+      "ground_pins": [
+        "GND",
+        "VSS"
+      ],
+      "power_budget_model": "supply_pin_load",
+      "circuit_model": "power_off_protected_spst",
+      "pin_mapping": {
+        "1": "IN1",
+        "2": "D1",
+        "3": "S1",
+        "4": "VSS",
+        "5": "GND",
+        "6": "S4",
+        "7": "D4",
+        "8": "IN4",
+        "9": "IN3",
+        "10": "D3",
+        "11": "S3",
+        "12": "NC",
+        "13": "VDD",
+        "14": "S2",
+        "15": "D2",
+        "16": "IN2"
+      },
+      "channels": [
+        {
+          "control": "1",
+          "drain": "2",
+          "source": "3"
+        },
+        {
+          "control": "16",
+          "drain": "15",
+          "source": "14"
+        },
+        {
+          "control": "9",
+          "drain": "10",
+          "source": "11"
+        },
+        {
+          "control": "8",
+          "drain": "7",
+          "source": "6"
+        }
+      ],
+      "positive_supply_pin": "13",
+      "negative_supply_pin": "4",
+      "ground_pin": "5",
+      "nc_pin": "12",
+      "normal_on_min_supply_v": 2.7,
+      "isolation_supply_max_v": 1.0,
+      "isolation_input_range_v": [
+        -5.5,
+        16.0
+      ],
+      "logic_high_min_v": 2.0,
+      "logic_low_max_v": 0.8,
+      "temperature_range_c": [
+        -40.0,
+        105.0
+      ],
+      "reference_supply_range_v": [
+        4.5,
+        5.5
+      ],
+      "reference_temperature_c": 25.0,
+      "on_resistance_reference_max_ohm_at4p5v": 14.7,
+      "on_leakage_reference_max_a_at5p5v": 5e-09,
+      "off_leakage_reference_max_a_no_power": 1.5e-07,
+      "off_leakage_test_condition": "25C; VDD0V or floating; VSS0V or floating; GND0; VS1V/16V, VD16V/1V; not a measured bound over every operating point",
+      "supply_reference_max_a_at5p5v": 0.00014,
+      "logic_high_reference_max_a": 1.6e-05,
+      "sources": [
+        {
+          "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/adg4612_4613.pdf",
+          "revision": "Rev0 October2010",
+          "pages": [
+            7,
+            8,
+            10,
+            17,
+            21,
+            22
+          ],
+          "evidence_kind": "primary_pdf_local_snapshot",
+          "local_snapshot_file": "adg4612-rev0.pdf",
+          "pdf_sha256": "da7e5b537396e1b53eb5e8b1cd45fcb3076b3991978a98ecf381bdaee038ba9d"
+        }
+      ],
+      "skus": [
+        {
+          "supplier": "Analog Devices",
+          "sku": "ADG4612BRUZ",
+          "url": "https://www.analog.com/en/products/adg4612.html",
+          "live_stock_and_price": "not_checked"
+        }
+      ],
+      "selection_basis": "Datasheet Table8 TSSOP pins; Table3 single5V supply not dual-supply5ohm headline; normal and power-off modes per Table11; input0.5..4V preserved",
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "physical_sample_tested": false,
+      "package_validation": "source TSSOP RU16 paired with native KiCad land pattern; not physical qualification"
+    },
+    {
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "physical_sample_tested": false,
+      "skus": [],
+      "package_validation": "source_nominal_land_pattern_and_pin_identity_only",
+      "manufacturer": "Vishay",
+      "mpn": "TNPW080522K0BEEA",
+      "kind": "resistor",
+      "symbol_id": "Device:R",
+      "footprint_id": "Resistor_SMD:R_0805_2012Metric",
+      "value_ohm": 22000.0,
+      "tolerance_fraction": 0.001,
+      "rated_power_w": 0.14,
+      "voltage_rating_v": 150.0,
+      "temperature_coefficient_ppm_per_k": 25.0,
+      "temperature_range_c": [
+        -55.0,
+        175.0
+      ],
+      "pin_mapping": {
+        "1": "passive",
+        "2": "passive"
+      },
+      "sources": [
+        {
+          "url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+          "local_snapshot_file": "tnpw_e3.pdf",
+          "pdf_sha256": "6f0508c568cb355aaf2accdd33fe3a780d3ea5ef207c4c9a71839a8acadc33a5",
+          "revision": "10-Apr-2026",
+          "pages": [
+            1,
+            3,
+            4
+          ],
+          "evidence_kind": "primary_pdf_local_snapshot"
+        }
+      ],
+      "selection_basis": "Manufacturer ordering table:0805,4-digit resistance,B0.1%,E25ppm,EApack; within1M range.0.14W general125C-film operating mode from p2; full family-55..175C TCR span conservatively retained; no live SKU/stock assertion"
+    },
+    {
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "physical_sample_tested": false,
+      "skus": [],
+      "package_validation": "source_nominal_land_pattern_and_pin_identity_only",
+      "manufacturer": "Vishay",
+      "mpn": "TNPW080539K0BEEA",
+      "kind": "resistor",
+      "symbol_id": "Device:R",
+      "footprint_id": "Resistor_SMD:R_0805_2012Metric",
+      "value_ohm": 39000.0,
+      "tolerance_fraction": 0.001,
+      "rated_power_w": 0.14,
+      "voltage_rating_v": 150.0,
+      "temperature_coefficient_ppm_per_k": 25.0,
+      "temperature_range_c": [
+        -55.0,
+        175.0
+      ],
+      "pin_mapping": {
+        "1": "passive",
+        "2": "passive"
+      },
+      "sources": [
+        {
+          "url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+          "local_snapshot_file": "tnpw_e3.pdf",
+          "pdf_sha256": "6f0508c568cb355aaf2accdd33fe3a780d3ea5ef207c4c9a71839a8acadc33a5",
+          "revision": "10-Apr-2026",
+          "pages": [
+            1,
+            3,
+            4
+          ],
+          "evidence_kind": "primary_pdf_local_snapshot"
+        }
+      ],
+      "selection_basis": "Manufacturer ordering table:0805,4-digit resistance,B0.1%,E25ppm,EApack; within1M range.0.14W general125C-film operating mode from p2; full family-55..175C TCR span conservatively retained; no live SKU/stock assertion"
+    },
+    {
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "physical_sample_tested": false,
+      "skus": [],
+      "package_validation": "source_nominal_land_pattern_and_pin_identity_only",
+      "manufacturer": "Vishay",
+      "mpn": "TNPW080588K7BEEA",
+      "kind": "resistor",
+      "symbol_id": "Device:R",
+      "footprint_id": "Resistor_SMD:R_0805_2012Metric",
+      "value_ohm": 88700.0,
+      "tolerance_fraction": 0.001,
+      "rated_power_w": 0.14,
+      "voltage_rating_v": 150.0,
+      "temperature_coefficient_ppm_per_k": 25.0,
+      "temperature_range_c": [
+        -55.0,
+        175.0
+      ],
+      "pin_mapping": {
+        "1": "passive",
+        "2": "passive"
+      },
+      "sources": [
+        {
+          "url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+          "local_snapshot_file": "tnpw_e3.pdf",
+          "pdf_sha256": "6f0508c568cb355aaf2accdd33fe3a780d3ea5ef207c4c9a71839a8acadc33a5",
+          "revision": "10-Apr-2026",
+          "pages": [
+            1,
+            3,
+            4
+          ],
+          "evidence_kind": "primary_pdf_local_snapshot"
+        }
+      ],
+      "selection_basis": "Manufacturer ordering table:0805,4-digit resistance,B0.1%,E25ppm,EApack; within1M range.0.14W general125C-film operating mode from p2; full family-55..175C TCR span conservatively retained; no live SKU/stock assertion"
+    },
+    {
+      "manufacturer": "Analog Devices",
+      "mpn": "LTC6992IS6-1#TRMPBF",
+      "kind": "timer",
+      "symbol_id": "PCB_MCP:LTC6992xS6-1",
+      "footprint_id": "Package_TO_SOT_SMD:TSOT-23-6",
+      "power_budget_model": "supply_pin_load",
+      "supply_pins": [
+        "V+"
+      ],
+      "ground_pins": [
+        "GND"
+      ],
+      "local_passive_pin_numbers": [
+        "1",
+        "3",
+        "4"
+      ],
+      "supply_min_v": 2.25,
+      "supply_max_v": 5.5,
+      "temperature_range_c": [
+        -40.0,
+        85.0
+      ],
+      "circuit_model": "ltc6992_resistor_pwm",
+      "pin_mapping": {
+        "1": "MOD",
+        "2": "GND",
+        "3": "SET",
+        "4": "DIV",
+        "5": "V+",
+        "6": "OUT"
+      },
+      "frequency_factor_hz_ohm": 50000000000.0,
+      "rset_range_ohm": [
+        50000.0,
+        800000.0
+      ],
+      "set_voltage_range_v": [
+        0.97,
+        1.03
+      ],
+      "mod_input_leakage_max_a": 1e-08,
+      "div_input_leakage_max_a": 1e-08,
+      "div_code_ratio_half_width": 0.015,
+      "div_max_thevenin_ohm": 500000.0,
+      "frequency_error_fraction_fulltemp": 0.024,
+      "duty_error_fraction_fulltemp": 0.045,
+      "qualified_mod_ratio_range": [
+        0.2,
+        0.8
+      ],
+      "datasheet_test_load_ohm": 5000.0,
+      "datasheet_test_capacitance_pf": 5.0,
+      "startup_typical_master_cycles": 500.0,
+      "startup_max_s": null,
+      "output_test_rows": [
+        {
+          "supply_v": 2.25,
+          "test_current_a": 0.001,
+          "high_min_v": 2.17,
+          "low_max_v": 0.07
+        },
+        {
+          "supply_v": 3.3,
+          "test_current_a": 0.001,
+          "high_min_v": 3.24,
+          "low_max_v": 0.05
+        },
+        {
+          "supply_v": 5.5,
+          "test_current_a": 0.001,
+          "high_min_v": 5.45,
+          "low_max_v": 0.04
+        }
+      ],
+      "recommended_layout": [
+        "local 100nF ceramic bypass with short low-inductance supply and ground paths",
+        "short SET connections, local DIV resistors, ground shielding and ground plane per datasheet pp23-24"
+      ],
+      "sources": [
+        {
+          "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/LTC6992-1-6992-2-6992-3-6992-4.pdf",
+          "retrieved_from": "https://e2e.ti.com/cfs-file/__key/communityserver-discussions-components-files/14/LTC6992_5F00_1_5F00_6992_5F00_2_5F00_6992_5F00_3_5F00_6992_5F00_4_2D00_1270033.pdf",
+          "revision": "Rev D November2019",
+          "pages": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            15,
+            16,
+            17,
+            19,
+            21,
+            23,
+            24,
+            29
+          ],
+          "local_snapshot_file": "ltc6992-revd-ti-mirror.pdf",
+          "pdf_sha256": "3467508cd090fd975cf4007a33d34c33173168046e99da95cc48f706c76990ac",
+          "evidence_kind": "manufacturer_authored_pdf_mirror_crosschecked_primary_web",
+          "provenance_note": "Primary ADI PDF readable via web; direct binary transfer truncated/403. This mirror has35 pages with appended distributor page and repaired xref warning. Hash identifies mirror bytes, not primary binary. Tables/pin map/Fig9 inspected visually and crosschecked against primary PDF text."
+        }
+      ],
+      "skus": [
+        {
+          "supplier": "Manufacturer order code",
+          "sku": "LTC6992IS6-1#TRMPBF",
+          "url": "https://www.analog.com/en/products/ltc6992-1.html",
+          "live_stock_and_price": "not_checked"
+        }
+      ],
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "physical_sample_tested": false,
+      "package_validation": "Source S6 pin and nominal TSOT-23-6 land-pattern pairing; assembly not tested",
+      "selection_basis": "Precision fixed-frequency/duty application from manufacturer Fig9; no claims that source timing tables qualify other loads, PCB parasitics, startup maximum or physical operation"
+    },
+    {
+      "qualification": "source_linked_candidate_not_human_qualified",
+      "physical_sample_tested": false,
+      "skus": [],
+      "package_validation": "nominal_package_identity_only_not_land_pattern_or_assembly_qualification",
+      "manufacturer": "Vishay",
+      "mpn": "CRCW060324K9FKEA",
+      "kind": "resistor",
+      "symbol_id": "Device:R",
+      "footprint_id": "Resistor_SMD:R_0603_1608Metric",
+      "value_ohm": 24900.0,
+      "tolerance_fraction": 0.01,
+      "rated_power_w": 0.1,
+      "voltage_rating_v": 75.0,
+      "temperature_coefficient_ppm_per_k": 100.0,
+      "temperature_range_c": [
+        -55.0,
+        155.0
+      ],
+      "power_rating_conditions": "Standard operating mode P70, subject to permitted film temperature and PCB thermal resistance; no temperature rise proof",
+      "pin_mapping": {
+        "1": "passive",
+        "2": "passive"
+      },
+      "selection_basis": "24K9 E96 nominal value; CRCW0603, F=1%, K=100ppm/K, EA packaging decoded from retained Vishay 20035 Rev14-Apr-2026 pp2-3. No live stock claim.",
+      "sources": [
+        {
+          "title": "Vishay D/CRCW e3, revision 14-Apr-2026, pages 1-3,7",
+          "url": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+          "local_snapshot_file": "vishay-dcrcwe3-2026.pdf",
+          "pdf_sha256": "4be046f9e6242f81255792de96cc7b2e11c9ad9cf86e411b0b9db401e7b5d54c"
+        }
+      ]
+    }
+  ],
+  "extension_revision": "0.8-TXS0102-source-identity",
+  "catalog_revision": "0.13 two source-linked additions"
+}

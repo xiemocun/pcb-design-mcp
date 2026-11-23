@@ -1,0 +1,399 @@
+{
+  "version": 1,
+  "name": "同一需求改版：LTC6992精密电阻脉冲源",
+  "requirement_sha256": "8a4e90bdbcff37367e496fdc3396429873aa98b8868186ea887db54f2ba1cb22",
+  "components": [
+    {
+      "ref": "J1",
+      "mpn": "61300211121",
+      "value": null,
+      "part_definition_hash": "89b6dd0d81cf5cded62e68f5457e33d9f8a4bb79f4f8fed0d62977fb6fd5a72f"
+    },
+    {
+      "ref": "J2",
+      "mpn": "61300211121",
+      "value": null,
+      "part_definition_hash": "89b6dd0d81cf5cded62e68f5457e33d9f8a4bb79f4f8fed0d62977fb6fd5a72f"
+    },
+    {
+      "ref": "U1",
+      "mpn": "LTC6992IS6-1#TRMPBF",
+      "value": null,
+      "part_definition_hash": "f77167ce773d08b28559ce648d4a37f2b267d171084e2df11f7f8f6dcd436913"
+    },
+    {
+      "ref": "R1",
+      "mpn": "TNPW080522K0BEEA",
+      "value": "22k",
+      "part_definition_hash": "e937d4b2541562cfbd1a05e7c1fa7b6b93a11b37dc0d039d7523fde2bc32ebd3"
+    },
+    {
+      "ref": "R2",
+      "mpn": "TNPW080539K0BEEA",
+      "value": "39k",
+      "part_definition_hash": "f37aafbdd954c2e6ab3cdca88218075fe7b99f118df3c2d39751ce85ac7129ce"
+    },
+    {
+      "ref": "R3",
+      "mpn": "TNPW0805100KBEEA",
+      "value": "100k",
+      "part_definition_hash": "a3c4eeaa8bf84743b987690b6156c04fe3839675f538fe2dda7a6f6bbf0e5da5"
+    },
+    {
+      "ref": "R4",
+      "mpn": "TNPW080588K7BEEA",
+      "value": "88.7k",
+      "part_definition_hash": "ae7d5cde751adbfd591a2bd95c6af315b5b1e93c4799a41e836b28e944f6e086"
+    },
+    {
+      "ref": "C1",
+      "mpn": "C1608X7R1H104K080AA",
+      "value": "100nF",
+      "part_definition_hash": "ad32e949fe8e270e33d2f5d5bbaaff8b438ca0e7f77414bd9bee83cb80c980e2"
+    }
+  ],
+  "nets": [
+    {
+      "name": "V5",
+      "kind": "power",
+      "pins": [
+        {
+          "ref": "J1",
+          "number": "1"
+        },
+        {
+          "ref": "U1",
+          "number": "5"
+        },
+        {
+          "ref": "R3",
+          "number": "1"
+        },
+        {
+          "ref": "C1",
+          "number": "1"
+        }
+      ]
+    },
+    {
+      "name": "GND",
+      "kind": "ground",
+      "pins": [
+        {
+          "ref": "J1",
+          "number": "2"
+        },
+        {
+          "ref": "J2",
+          "number": "2"
+        },
+        {
+          "ref": "U1",
+          "number": "2"
+        },
+        {
+          "ref": "R2",
+          "number": "2"
+        },
+        {
+          "ref": "R4",
+          "number": "2"
+        },
+        {
+          "ref": "C1",
+          "number": "2"
+        }
+      ]
+    },
+    {
+      "name": "SET",
+      "kind": "signal",
+      "pins": [
+        {
+          "ref": "U1",
+          "number": "3"
+        },
+        {
+          "ref": "R1",
+          "number": "1"
+        }
+      ]
+    },
+    {
+      "name": "MOD",
+      "kind": "signal",
+      "pins": [
+        {
+          "ref": "U1",
+          "number": "1"
+        },
+        {
+          "ref": "R1",
+          "number": "2"
+        },
+        {
+          "ref": "R2",
+          "number": "1"
+        }
+      ]
+    },
+    {
+      "name": "DIV",
+      "kind": "signal",
+      "pins": [
+        {
+          "ref": "U1",
+          "number": "4"
+        },
+        {
+          "ref": "R3",
+          "number": "2"
+        },
+        {
+          "ref": "R4",
+          "number": "1"
+        }
+      ]
+    },
+    {
+      "name": "PULSE_OUT",
+      "kind": "signal",
+      "pins": [
+        {
+          "ref": "U1",
+          "number": "6"
+        },
+        {
+          "ref": "J2",
+          "number": "1"
+        }
+      ]
+    }
+  ],
+  "no_connects": [],
+  "settings": [
+    {
+      "tool": "requirements_set",
+      "args": {
+        "items": [
+          {
+            "key": "function",
+            "value": "做一块外部5V供电的低频脉冲发生器，无MCU、固件或USB，持续输出40至60Hz、高电平占空比60%至75%的信号，供实验仪器读取。",
+            "origin": "proposed_assumption"
+          },
+          {
+            "key": "frozen_requirement_sha256",
+            "value": "8a4e90bdbcff37367e496fdc3396429873aa98b8868186ea887db54f2ba1cb22",
+            "origin": "proposed_assumption"
+          },
+          {
+            "key": "benchmark_id",
+            "value": "external_5v_pulse_source_01",
+            "origin": "proposed_assumption"
+          },
+          {
+            "key": "pulse_frequency_min_hz",
+            "value": 40,
+            "origin": "proposed_assumption"
+          },
+          {
+            "key": "pulse_frequency_max_hz",
+            "value": 60,
+            "origin": "proposed_assumption"
+          },
+          {
+            "key": "pulse_duty_min",
+            "value": 0.6,
+            "origin": "proposed_assumption"
+          },
+          {
+            "key": "pulse_duty_max",
+            "value": 0.75,
+            "origin": "proposed_assumption"
+          },
+          {
+            "key": "pulse_output_high_min_v",
+            "value": 4,
+            "origin": "proposed_assumption"
+          },
+          {
+            "key": "pulse_output_low_max_v",
+            "value": 0.5,
+            "origin": "proposed_assumption"
+          },
+          {
+            "key": "pulse_external_load_min_ohm",
+            "value": 100000,
+            "origin": "proposed_assumption"
+          },
+          {
+            "key": "pulse_external_cap_max_pf",
+            "value": 50,
+            "origin": "proposed_assumption"
+          }
+        ]
+      }
+    },
+    {
+      "tool": "power_source_set",
+      "args": {
+        "net_id": {
+          "$net": "V5"
+        },
+        "ground_net_id": {
+          "$net": "GND"
+        },
+        "boundary_pin": {
+          "$pin": [
+            "J1",
+            "1"
+          ]
+        },
+        "nominal_v": 5,
+        "reason": "Frozen externally regulated 5V supply assumption"
+      }
+    },
+    {
+      "tool": "power_envelope_set",
+      "args": {
+        "positive_pin": {
+          "$pin": [
+            "J1",
+            "1"
+          ]
+        },
+        "ground_net_id": {
+          "$net": "GND"
+        },
+        "nominal_v": 5,
+        "min_v": 4.75,
+        "max_v": 5.25,
+        "available_current_ma": 20,
+        "ambient_c": 25,
+        "origin": "proposed_assumption",
+        "reason": "Frozen external supply and 25C benchmark, not measured"
+      }
+    },
+    {
+      "tool": "passive_ratings_set",
+      "args": {
+        "requirements": [
+          {
+            "component_id": {
+              "$component": "C1"
+            },
+            "max_applied_voltage_v": 5.25,
+            "max_tolerance_fraction": 0.1,
+            "allowed_dielectrics": [
+              "X7R"
+            ]
+          },
+          {
+            "component_id": {
+              "$component": "R1"
+            },
+            "max_applied_voltage_v": 5.25,
+            "max_tolerance_fraction": 0.001,
+            "min_resistor_rated_power_w": 0.14
+          },
+          {
+            "component_id": {
+              "$component": "R2"
+            },
+            "max_applied_voltage_v": 5.25,
+            "max_tolerance_fraction": 0.001,
+            "min_resistor_rated_power_w": 0.14
+          },
+          {
+            "component_id": {
+              "$component": "R3"
+            },
+            "max_applied_voltage_v": 5.25,
+            "max_tolerance_fraction": 0.001,
+            "min_resistor_rated_power_w": 0.14
+          },
+          {
+            "component_id": {
+              "$component": "R4"
+            },
+            "max_applied_voltage_v": 5.25,
+            "max_tolerance_fraction": 0.001,
+            "min_resistor_rated_power_w": 0.14
+          }
+        ],
+        "origin": "proposed_assumption",
+        "reason": "Required stress and nominal tolerance; not effective capacitance evidence"
+      }
+    },
+    {
+      "tool": "power_budget_set",
+      "args": {
+        "profile": "direct_source_dc_v1",
+        "loads": [
+          {
+            "pin": {
+              "$pin": [
+                "U1",
+                "5"
+              ]
+            },
+            "max_current_ma": 1,
+            "scope": "supply_terminal_dc_including_io_drive"
+          }
+        ],
+        "stages": [],
+        "reserves": [
+          {
+            "net_id": {
+              "$net": "V5"
+            },
+            "unmodeled_dc_reserve_ma": 1
+          }
+        ],
+        "origin": "proposed_assumption",
+        "reason": "Declared 1mA IC/output budget and 1mA reserve; not measured total current"
+      }
+    },
+    {
+      "tool": "board_constraints_set",
+      "args": {
+        "width_mm": 60,
+        "height_mm": 40,
+        "clearance_mm": 0.15,
+        "track_width_mm": 0.2,
+        "edge_clearance_mm": 0.5,
+        "min_drill_mm": 0.3,
+        "hole_clearance_mm": 0.15,
+        "hole_to_hole_mm": 0.25,
+        "placement_profile": "bounded_grid"
+      }
+    },
+    {
+      "tool": "pcb_net_rules_set",
+      "args": {
+        "rules": [
+          {
+            "net_id": {
+              "$net": "V5"
+            },
+            "min_width_mm": 0.3,
+            "design_current_a": 0.02,
+            "reference_drop_budget_v": 0.05
+          },
+          {
+            "net_id": {
+              "$net": "GND"
+            },
+            "min_width_mm": 0.3,
+            "design_current_a": 0.02,
+            "reference_drop_budget_v": 0.05
+          }
+        ],
+        "copper_thickness_um": 35,
+        "temperature_rise_c": 20,
+        "origin": "proposed_assumption",
+        "reason": "20mA source reference; full current sharing and thermal qualification not inferred"
+      }
+    }
+  ]
+}

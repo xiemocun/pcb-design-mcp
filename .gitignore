@@ -1,0 +1,18 @@
+# 本地环境
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+
+# 从上游下载的第三方二进制（见 DEPENDENCIES.md）
+vendor/*.jar
+
+# 厂商数据手册缓存（见 DEPENDENCIES.md）
+evidence-cache/
+
+# 运行产物
+outputs/
+*.log

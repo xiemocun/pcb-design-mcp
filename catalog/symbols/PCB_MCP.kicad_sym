@@ -1,0 +1,215 @@
+(kicad_symbol_lib (version 20250114) (generator "pcb_design_mcp") (symbol "AM2302_SIP4" (property "Reference" "U" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Value" "AM2302_SIP4" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Footprint" "Sensor:ASAIR_AM2302_P2.54mm_Vertical" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Datasheet" "https://www.aosong.com/uploadfiles/2025/04/20250417105409216.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "Description" "Source-correct AM2302 SIP-4: pin3 NC, pin4 GND; not a 3-pin breakout" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (property "ki_fp_filters" "ASAIR*AM2302*P2.54mm*" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (symbol "AM2302_SIP4_0_1" (rectangle (start -5.08 5.08) (end 5.08 -5.08) (stroke (width 0.254) (type default)) (fill (type background)))) (symbol "AM2302_SIP4_1_1" (pin power_in line (at 0 7.62 270) (length 2.54) (name "VDD" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))) (pin bidirectional line (at 7.62 0 180) (length 2.54) (name "SDA" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27))))) (pin no_connect line (at 7.62 -2.54 180) (length 2.54) (name "NC" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27))))) (pin power_in line (at 0 -7.62 90) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))))
+(symbol "R78K3V3_1A" (property "Reference" "U" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Value" "R78K3V3_1A" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Footprint" "Converter_PCB_MCP:R78K_SIP3_Conservative_THT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://recom-power.com/pdf/Innoline/R-78K-1.0.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Description" "RECOM R-78K3.3-1.0; source pin1 IN,2 GND,3 OUT; source-linked prototype" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "ki_fp_filters" "R78K_SIP3*" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(symbol "R78K3V3_1A_0_1" (rectangle (start -5.08 5.08) (end 5.08 -5.08) (stroke (width .254) (type default)) (fill (type background))))(symbol "R78K3V3_1A_1_1" (pin power_in line (at -7.62 0 0) (length 2.54) (name "IN" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))(pin power_in line (at 0 -7.62 90) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))(pin power_out line (at 7.62 0 180) (length 2.54) (name "OUT" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))))
+(symbol "TUSB320LAI_GPIO" (property "Reference" "U" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Value" "TUSB320LAI_GPIO" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Footprint" "Package_DFN_QFN:Texas_X2QFN-12_1.6x1.6mm_P0.4mm" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tusb320lai.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Description" "TUSB320LAIRWBR source pin mapping; GPIO sink reference only" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "ki_fp_filters" "Texas_X2QFN-12_1.6x1.6mm_P0.4mm" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(symbol "TUSB320LAI_GPIO_0_1" (rectangle (start -5.08 15.24) (end 5.08 -15.24) (stroke (width .254) (type default)) (fill (type background))))(symbol "TUSB320LAI_GPIO_1_1" (pin bidirectional line (at -7.62 12.7 0) (length 2.54) (name "CC1" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))(pin bidirectional line (at 7.62 12.7 180) (length 2.54) (name "CC2" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))(pin input line (at -7.62 10.16 0) (length 2.54) (name "PORT" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))(pin input line (at 7.62 10.16 180) (length 2.54) (name "VBUS_DET" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))(pin input line (at -7.62 7.62 0) (length 2.54) (name "ADDR" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))(pin open_collector line (at 7.62 7.62 180) (length 2.54) (name "OUT3" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))(pin open_collector line (at -7.62 5.08 0) (length 2.54) (name "OUT1" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27)))))(pin open_collector line (at 7.62 5.08 180) (length 2.54) (name "OUT2" (effects (font (size 1.27 1.27)))) (number "8" (effects (font (size 1.27 1.27)))))(pin open_collector line (at -7.62 2.54 0) (length 2.54) (name "ID" (effects (font (size 1.27 1.27)))) (number "9" (effects (font (size 1.27 1.27)))))(pin power_in line (at 7.62 2.54 180) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "10" (effects (font (size 1.27 1.27)))))(pin input line (at -7.62 0.0 0) (length 2.54) (name "EN_N" (effects (font (size 1.27 1.27)))) (number "11" (effects (font (size 1.27 1.27)))))(pin power_in line (at 7.62 0.0 180) (length 2.54) (name "VDD" (effects (font (size 1.27 1.27)))) (number "12" (effects (font (size 1.27 1.27)))))))
+(symbol "TPS2553DBV" (property "Reference" "U" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Value" "TPS2553DBV" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps2553.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Description" "TPS2553DBVR source pin mapping; GPIO sink reference only" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "ki_fp_filters" "SOT-23-6" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(symbol "TPS2553DBV_0_1" (rectangle (start -5.08 7.62) (end 5.08 -7.62) (stroke (width .254) (type default)) (fill (type background))))(symbol "TPS2553DBV_1_1" (pin power_in line (at -7.62 5.08 0) (length 2.54) (name "IN" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))(pin power_in line (at 7.62 5.08 180) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))(pin input line (at -7.62 2.54 0) (length 2.54) (name "EN" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))(pin open_collector line (at 7.62 2.54 180) (length 2.54) (name "FAULT_N" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))(pin passive line (at -7.62 0.0 0) (length 2.54) (name "ILIM" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))(pin power_out line (at 7.62 0.0 180) (length 2.54) (name "OUT" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))))
+(symbol "SN74LVC1G14_DBV" (property "Reference" "U" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Value" "SN74LVC1G14_DBV" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc1g14.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Description" "SN74LVC1G14DBVR source pin mapping; GPIO sink reference only" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "ki_fp_filters" "SOT-23-5" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(symbol "SN74LVC1G14_DBV_0_1" (rectangle (start -5.08 7.62) (end 5.08 -7.62) (stroke (width .254) (type default)) (fill (type background))))(symbol "SN74LVC1G14_DBV_1_1" (pin no_connect line (at -7.62 5.08 0) (length 2.54) (name "NC" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))(pin input line (at 7.62 5.08 180) (length 2.54) (name "A" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))(pin power_in line (at -7.62 2.54 0) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))(pin output line (at 7.62 2.54 180) (length 2.54) (name "Y" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))(pin power_in line (at -7.62 0.0 0) (length 2.54) (name "VCC" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))))
+(symbol "TPSM82821A_SIL" (property "Reference" "U" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Value" "TPSM82821A_SIL" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Footprint" "Converter_PCB_MCP:TI_SIL0010D_2x2.5mm_P0.5mm" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tpsm82821.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Description" "TI TPSM82821ASILR forced PWM; source pin groups and external feedback required" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "ki_fp_filters" "TI_SIL0010D_2x2.5mm_P0.5mm" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (symbol "TPSM82821A_SIL_0_1" (rectangle (start -5.08 7.62) (end 5.08 -7.62) (stroke (width .254) (type default)) (fill (type background)))) (symbol "TPSM82821A_SIL_1_1" (pin power_in line (at -7.62 5.08 0) (length 2.54) (name "IN" (effects (font (size 1.27 1.27)))) (number "[1,2]" (effects (font (size 1.27 1.27)))))(pin input line (at -7.62 0 0) (length 2.54) (name "EN" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))(pin open_collector line (at 7.62 -5.08 180) (length 2.54) (name "PG" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))(pin power_out line (at 7.62 5.08 180) (length 2.54) (name "OUT" (effects (font (size 1.27 1.27)))) (number "[5,6,7]" (effects (font (size 1.27 1.27)))))(pin input line (at 7.62 0 180) (length 2.54) (name "FB" (effects (font (size 1.27 1.27)))) (number "8" (effects (font (size 1.27 1.27)))))(pin power_in line (at 0 -10.16 90) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "[9,10]" (effects (font (size 1.27 1.27)))))))
+(symbol "ADG4612BRUZ" (property "Reference" "U" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Value" "ADG4612BRUZ" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Footprint" "Package_SO:TSSOP-16_4.4x5mm_P0.65mm" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/adg4612_4613.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "Description" "ADI ADG4612BRUZ TSSOP source Table8 physical pins; single-unit source adapter" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))(property "ki_fp_filters" "TSSOP*16*4.4x5mm*P0.65mm*" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))) (symbol "ADG4612BRUZ_0_1" (rectangle (start -7.62 11.43) (end 7.62 -11.43) (stroke (width .254) (type default)) (fill (type background)))) (symbol "ADG4612BRUZ_1_1" (pin input line (at -10.16 8.89 0) (length 2.54) (name "IN1" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))(pin passive line (at -10.16 6.3500000000000005 0) (length 2.54) (name "D1" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))(pin passive line (at -10.16 3.8100000000000005 0) (length 2.54) (name "S1" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))(pin power_in line (at -10.16 1.2700000000000005 0) (length 2.54) (name "VSS" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))(pin power_in line (at -10.16 -1.2699999999999996 0) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))(pin passive line (at -10.16 -3.8099999999999987 0) (length 2.54) (name "S4" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))(pin passive line (at -10.16 -6.35 0) (length 2.54) (name "D4" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27)))))(pin input line (at -10.16 -8.89 0) (length 2.54) (name "IN4" (effects (font (size 1.27 1.27)))) (number "8" (effects (font (size 1.27 1.27)))))(pin input line (at 10.16 -8.89 180) (length 2.54) (name "IN3" (effects (font (size 1.27 1.27)))) (number "9" (effects (font (size 1.27 1.27)))))(pin passive line (at 10.16 -6.35 180) (length 2.54) (name "D3" (effects (font (size 1.27 1.27)))) (number "10" (effects (font (size 1.27 1.27)))))(pin passive line (at 10.16 -3.8099999999999987 180) (length 2.54) (name "S3" (effects (font (size 1.27 1.27)))) (number "11" (effects (font (size 1.27 1.27)))))(pin no_connect line (at 10.16 -1.2699999999999996 180) (length 2.54) (name "NC" (effects (font (size 1.27 1.27)))) (number "12" (effects (font (size 1.27 1.27)))))(pin power_in line (at 10.16 1.2700000000000005 180) (length 2.54) (name "VDD" (effects (font (size 1.27 1.27)))) (number "13" (effects (font (size 1.27 1.27)))))(pin passive line (at 10.16 3.8100000000000005 180) (length 2.54) (name "S2" (effects (font (size 1.27 1.27)))) (number "14" (effects (font (size 1.27 1.27)))))(pin passive line (at 10.16 6.3500000000000005 180) (length 2.54) (name "D2" (effects (font (size 1.27 1.27)))) (number "15" (effects (font (size 1.27 1.27)))))(pin input line (at 10.16 8.89 180) (length 2.54) (name "IN2" (effects (font (size 1.27 1.27)))) (number "16" (effects (font (size 1.27 1.27)))))))
+
+(symbol "LTC6992xS6-1"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "U"
+			(at -5.08 6.35 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LTC6992xS6-1"
+			(at 7.62 6.35 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6"
+			(at 0 -10.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/LTC6992-1-6992-2-6992-3-6992-4.pdf"
+			(at 1.27 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "LTC6992-1 PWM oscillator; source S6 pins 1 MOD,2 GND,3 SET,4 DIV,5 V+,6 OUT"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "Timer TimerBlox PWM oscillator"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "TSOT*23*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "LTC6992xS6-1_0_1"
+			(rectangle
+				(start -6.35 5.08)
+				(end 6.35 -5.08)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "LTC6992xS6-1_1_1"
+			(pin input line
+				(at -10.16 0 0)
+				(length 3.81)
+				(name "MOD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 -7.62 90)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -10.16 -2.54 0)
+				(length 3.81)
+				(name "SET"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -10.16 2.54 0)
+				(length 3.81)
+				(name "DIV"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 7.62 270)
+				(length 2.54)
+				(name "V+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 10.16 0 180)
+				(length 3.81)
+				(name "OUT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+)

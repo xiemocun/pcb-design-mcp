@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.16)
+list(APPEND EXTRA_COMPONENT_DIRS "${CMAKE_CURRENT_LIST_DIR}/src")
+if(DEFINED RIDE_ROLE_AP)
+    add_compile_definitions(RIDE_ROLE_AP=${RIDE_ROLE_AP})
+endif()
+include($ENV{IDF_PATH}/tools/cmake/project.cmake)
+project(riding_intercom)

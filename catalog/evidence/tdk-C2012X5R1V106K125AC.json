@@ -1,0 +1,23 @@
+{
+  "evidence_kind": "selected_primary_page_facts_not_full_document",
+  "facts": {
+    "capacitance_f": 1e-05,
+    "dielectric": "X5R",
+    "effective_capacitance_under_bias": "not_qualified",
+    "metric_dimensions_mm": [
+      2.0,
+      1.25,
+      1.25
+    ],
+    "mpn": "C2012X5R1V106K125AC",
+    "product_status_at_retrieval": "Production",
+    "temperature_range_c": [
+      -55.0,
+      85.0
+    ],
+    "tolerance_fraction": 0.1,
+    "voltage_rating_v": 35.0
+  },
+  "retrieved_on": "2026-10-23",
+  "url": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X5R1V106K125AC"
+}

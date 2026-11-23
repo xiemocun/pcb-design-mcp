@@ -1,0 +1,38 @@
+{
+  "body_mm": [
+    11.5,
+    7.55,
+    10.2
+  ],
+  "datasheet": "https://recom-power.com/pdf/Innoline/R-78K-1.0.pdf",
+  "efficiency_min_input_typ_fraction": 0.88,
+  "efficiency_qualification": "typical only; not a guaranteed current conversion bound",
+  "hardplug_input_cap_nominal_uf": 27.0,
+  "input_v": [
+    4.5,
+    36.0
+  ],
+  "line_regulation_max_fraction": 0.005,
+  "load_regulation_max_fraction": 0.035,
+  "manufacturer": "RECOM Power",
+  "mpn": "R-78K3.3-1.0",
+  "output_v": 3.3,
+  "pages": [
+    1,
+    2,
+    5,
+    7
+  ],
+  "pin_mapping": {
+    "1": "IN",
+    "2": "GND",
+    "3": "OUT"
+  },
+  "pitch_mm": 2.54,
+  "rated_output_a": 1.0,
+  "reference_condition": "25C, nominal input, full load, after warm-up unless stated",
+  "revision": "Rev. 6-2025",
+  "ripple_qualification": "Table field column not reliably recovered; no guaranteed maximum inferred",
+  "ripple_vpp": 0.05,
+  "set_accuracy_max_fraction": 0.035
+}
