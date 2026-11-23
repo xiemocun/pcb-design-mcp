@@ -7,6 +7,7 @@ name = "pcb-design-mcp"
 dynamic = ["version"]
 description = "Typed KiCad design MCP with verified geometry and signed prototype file exports"
 requires-python = ">=3.12"
+license = {text = "MIT"}
 dependencies = ["mcp>=1,<2", "skidl>=3,<4", "schematizer>=0.2,<0.3", "cryptography>=44", "jsonschema>=4,<5", "numpy>=1.26,<3", "pydantic>=2,<3"]
 
 [project.scripts]

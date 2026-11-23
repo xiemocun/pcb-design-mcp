@@ -72,9 +72,9 @@ docs/DEVLOG-0.16.md   0.16 阶段的开发流水（历史记录，其中的工�
 
 ## 许可证
 
-**尚未选定。** 在补充许可证之前，本仓库不授予任何使用、修改或再分发许可。
+[MIT](LICENSE) © 2026 xiemocun
 
-如需二次开发或商用，请先与作者确认。
+第三方组件遵循各自许可证：Freerouting（GPL-3.0）不随仓库分发，获取方式见 [DEPENDENCIES.md](DEPENDENCIES.md)。
 
 ## 致谢
 
