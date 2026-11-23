@@ -1,7 +1,7 @@
-include README.md requirements-lock.txt
+include README.md LICENSE DEPENDENCIES.md requirements-lock.txt
 include SOFTWARE.md tests/software_release_e2e.py tests/test_software_release.py
 include V1_GOAL.md GENERALIZATION.md GENERALIZATION_PLAN.md
 recursive-include tests *.py *.json
 recursive-include catalog *.json *.kicad_sym *.kicad_mod
-recursive-include evidence-cache *.pdf *.json
-include vendor/freerouting-2.4.1.jar runtime/router.json reviewer/Reviewer.swift
+recursive-include docs *.md
+include runtime/router.json reviewer/Reviewer.swift

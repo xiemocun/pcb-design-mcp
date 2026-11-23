@@ -34,6 +34,45 @@ pip install -e .
 
 自动布线依赖 Freerouting，**不随仓库分发**，需要自行下载，见 [DEPENDENCIES.md](DEPENDENCIES.md)。
 
+### 接到 MCP 客户端
+
+服务走 stdio。在支持 MCP 的客户端里这样配置（把路径换成你的虚拟环境）：
+
+```json
+{
+  "mcpServers": {
+    "pcb-design": {
+      "command": "/absolute/path/to/.venv/bin/pcb-design-mcp"
+    }
+  }
+}
+```
+
+### 确认装好了
+
+```bash
+python -c "import pcb_mcp; print(pcb_mcp.__version__)"   # 0.17.0.dev68
+pcb-mcp --help
+```
+
+## 测试现状（需要如实说明）
+
+`tests/` 下有 229 个用例，但**其中约 100 个依赖开发工作区里的产物**（例如 `acceptance-bom/report.json`、`acceptance-parts/report.json`），这些文件不在仓库内。
+
+**所以目前无法在本仓库里直接跑通整套测试。** 这是已知的缺口，不是配置问题。
+
+现在能验证的是打包与安装链路，CI 每次推送都会跑：
+
+```bash
+pip install build && python -m build     # 构建 sdist 与 wheel
+pip install dist/*.whl                    # 装进干净环境
+python -c "import pcb_mcp; print(pcb_mcp.__version__)"
+```
+
+CI 同时检查三条入口命令存在、以及 wheel 里**不含** JAR 与 PDF。
+
+要让测试可独立运行，需要把那些验收产物一并入库或改为可再生成——这项工作尚未完成。
+
 ## 试用版本状态
 
 | 项 | 状态 |

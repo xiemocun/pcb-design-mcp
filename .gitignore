@@ -16,3 +16,8 @@ evidence-cache/
 # 运行产物
 outputs/
 *.log
+# 构建产物
+dist/
+build/
+*.egg-info/
+.venv-check/
