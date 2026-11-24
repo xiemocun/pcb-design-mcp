@@ -108,9 +108,11 @@ python scripts/stdio_smoke.py # STDIO SMOKE PASS（83 工具，创建/读回/列
 ```
 
 - 30 份被钉住的证据文件中：**22 份可从公开渠道恢复**（8 份一方摘录随发行包内置 + 11 份厂商 PDF 哈希仍匹配 + 3 份 USB-IF 文档从官方 zip 抽取且哈希匹配）。
+  其中 `panasonic-fc-a.pdf` 站点极慢：当日一次 curl 下载成功且哈希与 pin 一致，但全量恢复运行时 urllib 与 curl 均可能超时，需要重试。
+- 公开恢复后器件级核对：**24/38 器件证据可用**；其余 14 个器件被下述 8 份漂移 PDF 挡住（`missing_or_changed`）。
 - **8 份厂商 PDF 上游已改版**（哈希漂移）：`ltc6992-revd-ti-mirror.pdf`、`sn74lvc1g07.pdf`、`sn74lvc1g14.pdf`、`sn74lvc1g17.pdf`、`tlc555-2026.pdf`、`tlv755p.pdf`、`tps2553.pdf`、`vishay-dcrcwe3-2026.pdf`。
   恢复工具**只报告、不安装、不改 pin**，需要人工目录评审后决定如何更新来源。详见 DEPENDENCIES.md。
-- 用完整原始资源（私有交接缓存）补齐后，本机按 `parts.py` 同一哈希逻辑做数据级核对：**38/38 器件证据可用**。
+- 用完整原始资源（私有交接缓存）补齐后，本机按 `parts.py` 同一哈希逻辑做数据级核对：**38/38 器件证据可用**（实测通过）。
   注意这是数据级核对；完整 `parts.catalog()` 还需 KiCad 封装库（见第 6 节）。
 
 ## 6. 仍需环境验证的项（本机无法完成）
