@@ -1,0 +1,28 @@
+{
+  "scope": "Selected primary source facts, not complete PDFs or measured qualification",
+  "observed_on": "2026-10-23",
+  "sources": [
+    {
+      "url": "https://documentation.espressif.com/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.html",
+      "title": "ESP32-WROOM-32E/UE datasheet v2.1",
+      "sections": [
+        "3.2",
+        "4.6 table9",
+        "6.3 table15"
+      ],
+      "facts": [
+        "EN high enables; EN low resets. EN is module pin3.",
+        "Power stability to activation minimum50us; reset low pulse minimum50us.",
+        "CHIP_PU reset low maximum0.6V; reset released high input minimum0.75*VDD, in3.3V25C DC table. Intermediate levels do not specify an exact switching threshold."
+      ]
+    },
+    {
+      "url": "https://docs.espressif.com/projects/esp-hardware-design-guidelines/en/latest/esp32/schematic-checklist.html#chip-power-up-and-reset-timing",
+      "title": "ESP32 hardware guidelines, power-up/reset",
+      "facts": [
+        "10kohm/1uF is a suggested RC starting point; values depend on actual power timing. Slow, repeated or unstable supply may need power monitoring/reset circuitry."
+      ]
+    }
+  ],
+  "verification": "Selected primary HTML text read; no waveform measurement or complete source PDF included"
+}

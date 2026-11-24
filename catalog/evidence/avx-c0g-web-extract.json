@@ -1,0 +1,17 @@
+{
+  "url": "https://datasheets.kyocera-avx.com/c0gnp0-dielectric.pdf",
+  "retrieved": "2026-10-26",
+  "method": "primary_web_pdf_text; direct download HTTP406",
+  "facts": {
+    "code_A": "C0G",
+    "code_5": "50V",
+    "code_J": "5%",
+    "code_121": "120pF",
+    "case": "0603",
+    "temperature_range_c": [
+      -55,
+      125
+    ]
+  },
+  "source_support": "KYOCERA AVX C0GNP0 dielectric Rev4; TI SLVSEP0F Table9-1 names exact06035A121JAT2A"
+}

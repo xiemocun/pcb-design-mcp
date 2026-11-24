@@ -6,21 +6,24 @@ from setuptools.command.build_py import build_py
 
 
 class BuildWithAssets(build_py):
+    """Package only first-party runtime assets.
+
+    Vendor binaries (the Freerouting JAR) and downloaded manufacturer
+    datasheets are NEVER packaged, even when a development checkout has
+    them in vendor/ or evidence-cache/. They are restored at install time
+    by ``pcb-router`` / ``pcb-evidence`` from their pinned upstream sources.
+    """
     def run(self):
         super().run()
         root = Path(__file__).resolve().parent
         destination = Path(self.build_lib) / 'pcb_mcp/_assets'
-        for directory in ('catalog', 'evidence-cache'):
-            source = root / directory
-            if not source.is_dir():
-                # Datasheets are fetched from the vendor, not redistributed here.
-                continue
-            shutil.copytree(source, destination / directory, dirs_exist_ok=True,
+        source = root / 'catalog'
+        if source.is_dir():
+            shutil.copytree(source, destination / 'catalog', dirs_exist_ok=True,
                             ignore=shutil.ignore_patterns('__pycache__', '*.pyc', '.DS_Store'))
-        for name in ('vendor/freerouting-2.4.1.jar', 'runtime/router.json', 'reviewer/Reviewer.swift'):
+        for name in ('runtime/router.json', 'reviewer/Reviewer.swift'):
             source = root / name
             if not source.is_file():
-                # The router JAR is downloaded from upstream; see DEPENDENCIES.md.
                 continue
             target = destination / name
             target.parent.mkdir(parents=True, exist_ok=True)
