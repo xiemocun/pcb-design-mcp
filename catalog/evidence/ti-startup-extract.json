@@ -1,0 +1,33 @@
+{
+  "scope": "Selected primary-source facts, not full PDFs or physical qualification",
+  "observed_on": "2026-10-23",
+  "sources": [
+    {
+      "url": "https://www.ti.com/lit/an/slva670a/slva670a.pdf",
+      "title": "Managing Inrush Current",
+      "revision": "SLVA670A May2015",
+      "pages": [
+        2
+      ],
+      "facts": [
+        "For a constant capacitance reference, capacitor current is capacitance times instantaneous voltage slew. Average voltage rise over an interval does not guarantee a maximum instantaneous slew."
+      ]
+    },
+    {
+      "url": "https://www.ti.com/lit/ds/symlink/tps2553.pdf",
+      "title": "TPS2553 datasheet",
+      "revision": "SLVS841F August2016",
+      "pages": [
+        7,
+        13,
+        14
+      ],
+      "facts": [
+        "Output rise-time table uses CL1uF,RL100ohm; at VIN6.5V typ1.1ms/max1.5ms; at VIN2.5V typ0.7ms/max1ms. MIN column is blank in both rows.",
+        "These times do not supply a guaranteed maximum instantaneous slew for the current28.2uF nominal switched rail.",
+        "TPS2553 is the constant-current variant; TPS2553-1 is a different latch-off variant."
+      ]
+    }
+  ],
+  "verification": "Formula read from primary web PDF; TPS2553 page7 table visually checked from the existing hash-pinned local PDF; no measured waveform"
+}

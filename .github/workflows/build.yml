@@ -43,9 +43,22 @@ jobs:
           /tmp/fresh/bin/python - <<'PY'
           from importlib.metadata import entry_points
           names = {e.name for e in entry_points(group="console_scripts")}
-          for want in ("pcb-design-mcp", "pcb-mcp", "pcb-plan"):
+          for want in ("pcb-design-mcp", "pcb-mcp", "pcb-plan", "pcb-evidence", "pcb-router"):
               assert want in names, f"missing entry point: {want}"
           print("entry points ok")
+          PY
+
+      - name: Bundled fact extracts restore offline from the installed wheel
+        run: |
+          /tmp/fresh/bin/pcb-evidence --bundled-only
+          /tmp/fresh/bin/python - <<'PY'
+          from pathlib import Path
+          import pcb_mcp
+          cache = Path(pcb_mcp.__file__).parent / "_assets/evidence-cache"
+          files = sorted(p.name for p in cache.glob("*.json"))
+          assert len(files) == 8, files
+          assert "avx-c0g-web-extract.json" in files
+          print("bundled extracts restored:", files)
           PY
 
       - name: No third-party binaries are shipped
@@ -54,3 +67,45 @@ jobs:
             echo "vendor binaries must not be packaged"; exit 1
           fi
           echo "wheel contains no jar/pdf"
+
+  wheel-checks:
+    name: installed-wheel tests & stdio (py${{ matrix.python }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+
+      - name: Build and install the wheel into a clean environment
+        run: |
+          python -m pip install --upgrade pip build setuptools wheel
+          python -m build --wheel
+          python -m venv /tmp/fresh
+          /tmp/fresh/bin/pip install dist/*.whl build setuptools wheel
+
+      - name: Owner-verified standalone unittest modules (against the installed wheel)
+        run: |
+          /tmp/fresh/bin/python -m unittest -v \
+            tests.test_rpc tests.test_measurements tests.test_stackup \
+            tests.test_design_contract tests.test_software_release
+
+      - name: Additional self-contained modules (must run from inside tests/)
+        run: |
+          cd tests
+          /tmp/fresh/bin/python -m unittest -v \
+            test_ac_reference test_measurement_ratio test_spice_bundle test_spice_units
+
+      - name: Packaging regression (planted vendor files must stay out of wheel and sdist)
+        run: /tmp/fresh/bin/python -m unittest -v tests.test_packaging_assets
+
+      - name: Real stdio MCP smoke from outside the source tree
+        run: |
+          mkdir -p /tmp/stdio-smoke
+          cd /tmp/stdio-smoke
+          /tmp/fresh/bin/python "$GITHUB_WORKSPACE/scripts/stdio_smoke.py"

@@ -85,15 +85,17 @@ def doctor():
     add('java', bool(ok and match and int(match[1]) >= 25), version, 'Install Java 25+ and set runtime.java to its executable.')
     jar = pcb_service.ROUTER
     good = jar.is_file() and hashlib.sha256(jar.read_bytes()).hexdigest() == config.ROUTER_SHA256
-    add('freerouting', good, str(jar), 'Use the bundled, pinned Freerouting 2.4.1 JAR.')
+    add('freerouting', good, str(jar), 'Run pcb-router to install the pinned Freerouting 2.4.1 JAR (see DEPENDENCIES.md).')
     try:
         from pcb_mcp import parts
         records = parts.catalog()
         unavailable = [p['mpn'] for p in records if p['evidence_status'] != 'available']
         add('catalog_evidence', bool(records) and not unavailable,
-            dict(parts=len(records), unavailable=unavailable), 'Restore the matching bundled assets; do not silently repin sources.')
+            dict(parts=len(records), unavailable=unavailable),
+            'Run pcb-evidence to restore the pinned manufacturer evidence; do not silently repin sources.')
     except Exception as exc:
-        add('catalog_evidence', False, str(exc), 'Reinstall the complete distribution including runtime assets.')
+        add('catalog_evidence', False, str(exc),
+            'Reinstall the distribution, then run pcb-evidence and pcb-router (see DEPENDENCIES.md).')
     return dict(version=__version__, ready=all(c['status'] == 'pass' for c in checks),
                 checks=checks, data_dir=str(config.data_dir()), assets=str(config.asset_root()),
                 optional=dict(reviewer_available=config.reviewer_binary().is_file(),

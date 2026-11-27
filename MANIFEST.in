@@ -1,7 +1,12 @@
 include README.md LICENSE DEPENDENCIES.md requirements-lock.txt
 include SOFTWARE.md tests/software_release_e2e.py tests/test_software_release.py
 include V1_GOAL.md GENERALIZATION.md GENERALIZATION_PLAN.md
+include install_evidence.py install_router.py
+include vendor/README.md
 recursive-include tests *.py *.json
 recursive-include catalog *.json *.kicad_sym *.kicad_mod
 recursive-include docs *.md
+recursive-include scripts *.py
 include runtime/router.json reviewer/Reviewer.swift
+prune evidence-cache
+global-exclude *.pdf *.jar

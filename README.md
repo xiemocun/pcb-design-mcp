@@ -24,15 +24,35 @@ python -m venv .venv
 pip install -e .
 ```
 
-安装后提供三个命令：
+安装后提供五个命令：
 
 | 命令 | 用途 |
 |---|---|
 | `pcb-design-mcp` | MCP 服务（stdio） |
 | `pcb-mcp` | 客户端命令行 |
 | `pcb-plan` | 生成 / 查看计划 |
+| `pcb-evidence` | 恢复器件证据（一方摘录 + 按固定哈希下载厂商文档） |
+| `pcb-router` | 安装固定版本的 Freerouting 布线器 JAR |
 
-自动布线依赖 Freerouting，**不随仓库分发**，需要自行下载，见 [DEPENDENCIES.md](DEPENDENCIES.md)。
+也可以直接安装发布 wheel：`pip install pcb_design_mcp-0.17.0.dev68-py3-none-any.whl`。
+
+### 恢复运行资源（新安装必做一次）
+
+发行包**不含**厂商数据手册 PDF 和布线器 JAR（再分发条件限制），但内置了全部一方事实摘录与来源清单。
+安装后运行：
+
+```bash
+pcb-evidence --bundled-only   # 离线：把 8 份一方摘录恢复到安装目录（无需联网）
+pcb-evidence                  # 联网：按 catalog 固定哈希下载厂商 PDF 与 USB-IF 文档
+pcb-router                    # 下载并校验 Freerouting 2.4.1（需要 Java 25 才能运行布线）
+```
+
+- 文件写入**程序实际读取的目录**：源码 checkout 是仓库根的 `evidence-cache/`、`vendor/`；
+  wheel 安装是 site-packages 里的 `pcb_mcp/_assets/evidence-cache/`、`pcb_mcp/_assets/vendor/`。
+  可用环境变量 `PCB_MCP_ASSET_ROOT` 指到别处。
+- 上游文件若已改版（哈希与 pin 不符），工具**只报告、不安装、绝不静默改 pin**；
+  当前已知 8 份厂商 PDF 漂移，清单与处理方式见 [DEPENDENCIES.md](DEPENDENCIES.md)。
+- `pcb-router --url <镜像>` 可走镜像下载，SHA-256 与 ZIP CRC 校验不放松。
 
 ### 接到 MCP 客户端
 
@@ -55,23 +75,30 @@ python -c "import pcb_mcp; print(pcb_mcp.__version__)"   # 0.17.0.dev68
 pcb-mcp --help
 ```
 
-## 测试现状（需要如实说明）
+## 测试现状（如实说明）
 
-`tests/` 下有 229 个用例，但**其中约 100 个依赖开发工作区里的产物**（例如 `acceptance-bom/report.json`、`acceptance-parts/report.json`），这些文件不在仓库内。
+`tests/` 下共 **229 个 Python 文件**，其中 **53 个 `test_*.py` unittest 模块**——「229」是文件数，不是用例数。
 
-**所以目前无法在本仓库里直接跑通整套测试。** 这是已知的缺口，不是配置问题。
-
-现在能验证的是打包与安装链路，CI 每次推送都会跑：
+- **5 个模块 / 78 项用例完全自包含**（`test_rpc`、`test_measurements`、`test_stackup`、`test_design_contract`、`test_software_release`），已接入 CI，对安装好的 wheel 运行：
 
 ```bash
-pip install build && python -m build     # 构建 sdist 与 wheel
-pip install dist/*.whl                    # 装进干净环境
-python -c "import pcb_mcp; print(pcb_mcp.__version__)"
+python -m unittest -v tests.test_rpc tests.test_measurements tests.test_stackup \
+  tests.test_design_contract tests.test_software_release
 ```
 
-CI 同时检查三条入口命令存在、以及 wheel 里**不含** JAR 与 PDF。
+- 本机全量扫描：**47/53 个模块可通过**（其中 4 个需在 `tests/` 目录内运行）；其余 6 个被已核实的缺失依赖挡住（历史工作区数据、未入库的辅助模块、KiCad 库）。
+- 测试引用的 **34 个 `acceptance-*` 历史验收目录已核实全部缺失**，将逐步改为可生成的夹具；完整清单、逐项缺失原因与可复制命令见 **[docs/TEST_STATUS.md](docs/TEST_STATUS.md)**。
 
-要让测试可独立运行，需要把那些验收产物一并入库或改为可再生成——这项工作尚未完成。
+CI 每次 push/PR 还会跑：
+
+```bash
+pip install build && python -m build      # 构建 sdist 与 wheel
+pip install dist/*.whl                     # 装进干净环境
+python -m unittest tests.test_packaging_assets   # 打包回归：植入模拟 PDF/JAR 后构建，必须被排除
+python scripts/stdio_smoke.py              # 源码目录外，真实 stdio 连接：工具发现 + 建工程 + 读回
+```
+
+并检查五个入口命令存在、wheel 里**不含** JAR 与 PDF、`pcb-evidence --bundled-only` 能离线恢复一方摘录。
 
 ## 试用版本状态
 
@@ -97,8 +124,11 @@ CI 同时检查三条入口命令存在、以及 wheel 里**不含** JAR 与 PDF
 src/pcb_mcp/          MCP 服务：工具、校验、几何
 src/pcb_mcp_client/   客户端：命令行、计划、固件绑定
 firmware/am2302/      参考固件（ESP-IDF 5.5.0）
-tests/                回归与端到端用例
-catalog/              器件 / 符号 / 封装的来源绑定资料
+tests/                回归与端到端用例（现状见 docs/TEST_STATUS.md）
+scripts/stdio_smoke.py  对安装好的 wheel 做真实 stdio 冒烟
+install_evidence.py   源码 checkout 的证据恢复入口（等同 pcb-evidence）
+install_router.py     源码 checkout 的布线器安装入口（等同 pcb-router）
+catalog/              器件 / 符号 / 封装的来源绑定资料（含可公开的一方事实摘录）
 runtime/router.json   布线器与 JRE 的来源、版本、校验值
 docs/DEVLOG-0.16.md   0.16 阶段的开发流水（历史记录，其中的工作区链接已失效）
 ```
